@@ -11,11 +11,65 @@
 ModTrakAPI.prototype = {
     initialize: function() {
         this.debug = (gs.getProperty("x_neyu_modtrak.debug", "false") == "true");
-		this.mid = gs.getProperty("x_neyu_modtrak.mid_server");
+        this.mid = gs.getProperty("x_neyu_modtrak.mid_server");
+        this.wsUtil = new WebServiceUtil();
     },
 
-    create: function() {
-        // placeholder function to create a ModTrak
+    create: function(
+        requestor,
+        applicationName,
+        applicationFunction = null,
+        subject,
+        status,
+        description,
+        reasonForChange,
+        changeType,
+        priority,
+        refNumber,
+        requestDate,
+        requestedDueDate,
+        department,
+        workflowFlag = "Y",
+        deptApprover = null,
+        deptApprDate = null,
+        workStartedDate,
+        completeDate,
+        infoTechApprover = null,
+        infoTechApprDate = null
+    ) {
+        var attrs = new Object();
+        attrs['requestor'] = requestor;
+        attrs['applicationName'] = applicationName;
+        attrs['applicationFunction'] = applicationFunction;
+        attrs['subject'] = subject;
+        attrs['status'] = status;
+        attrs['description'] = description;
+        attrs['reasonForChange'] = reasonForChange;
+        attrs['changeType'] = changeType;
+        attrs['priority'] = priority;
+        attrs['refNumber'] = refNumber;
+        attrs['requestDate'] = requestDate;
+        attrs['requestedDueDate'] = requestedDueDate;
+        attrs['department'] = department;
+        attrs['workflowFlag'] = workflowFlag;
+        attrs['deptApprover'] = deptApprover;
+        attrs['deptApprDate'] = deptApprDate;
+        attrs['workStartedDate'] = workStartedDate;
+        attrs['completeDate'] = completeDate;
+        attrs['infoTechApprover'] = infoTechApprover;
+        attrs['infoTechApprDate'] = infoTechApprDate;
+
+        var response = this.wsUtil.rest(
+            ModTrakAPI.CONSTANTS.API.CREATE.name,
+            ModTrakAPI.CONSTANTS.API.CREATE.method,
+            attrs
+        );
+
+        if (response.error) {
+            gs.error("ModTrak POST returned an error.\nError: {0}", response.errorMessage);
+        }
+
+        return response;
     },
 
     status: function() {
@@ -43,13 +97,13 @@ ModTrakAPI.CONSTANTS = {
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-22 21:57:22</sys_created_on>
         <sys_id>a8e617531b19d2103f31a9b6624bcb4b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>ModTrakAPI</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_a8e617531b19d2103f31a9b6624bcb4b</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-10-22 22:10:32</sys_updated_on>
+        <sys_updated_on>2024-10-23 17:58:02</sys_updated_on>
     </sys_script_include>
 </record_update>

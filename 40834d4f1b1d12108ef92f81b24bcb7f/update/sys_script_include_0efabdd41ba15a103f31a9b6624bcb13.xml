@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_neyu_modtrak.ChangeHelper</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ChangeHelper</name>
+        <script><![CDATA[var ChangeHelper = Class.create();
+ChangeHelper.prototype = {
+    initialize: function() {
+        this.debug = (gs.getProperty("x_neyu_modtrak.debug", "false") == "true");
+    },
+
+    /**
+     * Validates that required fields are present in the request
+     * 
+     * @returns - {object} object containing whether there was an error
+     * 				and any missing fields
+     */
+    validateChangePOST: function(request) {
+
+        if (gs.nil(request.modtrak_number)) {
+            return {
+                error: true,
+                errorMessage: "ModTrak Number is required.",
+                status: 400
+            };
+        }
+
+        // everything looks good
+        return {
+            error: false,
+            errorMessage: ""
+        };
+    },
+
+    /**
+     * Creates a new change request given the validated request data
+     * 
+     * @param request {object} - the HTTP POST Request Body
+     * @return {object} - The payload to return to the requestor
+     */
+    createChange: function(request) {
+        if (this.debug) {
+            gs.info("Create Change Request\nparams: " + JSON.stringify(request));
+        }
+        return gs.nil(request.template_id) ?
+            this._createChange(request) :
+            this._createStdChange(request);
+    },
+
+    _createStdChange: function(params) {
+        var templateId = params.template_id;
+        delete params.template_id;
+
+        var stdChangeProcess = global.StandardChangeProcess
+            .newChangeProcess(templateId, params);
+        stdChangeProcess.insert();
+
+        var result = {
+            data: {
+                sys_id: stdChangeProcess.getGlideRecord().getValue("sys_id"),
+                number: stdChangeProcess.getGlideRecord().getValue("number")
+            }
+        };
+        return result;
+    },
+
+    _createChange: function(params) {
+        var changeGR = new GlideRecord("change_request");
+        changeGR.initialize();
+
+        Object.keys(params).forEach((k) =>
+            changeGR.setValue(
+                ChangeHelper.POST_PARAMS_MAP[k], this._resolveValue(params[k], ChangeHelper.POST_PARAMS_MAP[k])
+            )
+        );
+
+        changeGR.setValue("correlation_display", ChangeHelper.CORRELATION_KEY);
+        // set change model
+        var chgModel = this._findChgModel(params.type);
+        if (gs.nil(chgModel)) {
+            return {
+                error: true,
+                errorMessage: "Unable to locate change model for type",
+                status: 400
+            };
+        }
+
+        changeGR.setValue("model", chgModel);
+        changeGR.insert();
+        var result = {
+            data: {
+                sys_id: changeGR.getValue("sys_id"),
+                number: changeGR.getValue("number")
+            }
+        };
+        return result;
+    },
+
+	_resolveValue: function(value, key) {
+		switch (key) {
+			case "requested_by":
+				var userGR = new GlideRecordSecure("sys_user");
+				userGR.get("user_name", value);
+				return userGR.getValue("sys_id");
+			case "service_offering":
+				var svcGR = new GlideRecordSecure("service_offering");
+				svcGR.get("name", value);
+				return svcGR.getValue("sys_id");
+			default:
+				return value;
+		}
+	},
+
+    _findChgModel: function(type) {
+        var chgModel = new GlideRecordSecure("chg_model");
+        chgModel.addQuery("name", type);
+        chgModel.setLimit(1);
+        chgModel.query();
+
+        if (chgModel.next()) {
+            return chgModel.getValue("sys_id");
+        } else {
+            return null;
+        }
+    },
+
+    type: 'ChangeHelper'
+};
+
+ChangeHelper.CORRELATION_KEY = "ModTrak";
+ChangeHelper.POST_PARAMS_MAP = {
+    "requested_by": "requested_by",
+    "short_description": "short_description",
+    "description": "description",
+    "start_date": "start_date",
+    "modtrak_number": "correlation_id",
+    "requested_by_date": "requested_by_date",
+    "service_offering": "service_offering",
+    "state": "state"
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-25 17:50:32</sys_created_on>
+        <sys_id>0efabdd41ba15a103f31a9b6624bcb13</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>ChangeHelper</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_script_include_0efabdd41ba15a103f31a9b6624bcb13</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-25 20:52:21</sys_updated_on>
+    </sys_script_include>
+</record_update>

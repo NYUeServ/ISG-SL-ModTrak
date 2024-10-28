@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_neyu_modtrak.ModTrak</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ModTrak</name>
+        <script><![CDATA[var ModTrak = Class.create();
+ModTrak.prototype = {
+    initialize: function(
+		requestor,
+		applicationName,
+		applicationFunction = null,
+		subject,
+		status,
+		description,
+		reasonForChange,
+		changeType,
+		priority,
+		refNumber,
+		requestDate,
+		requestedDueDate,
+		department,
+		workflowFlag = "Y",
+		deptApprover = null,
+		deptApprDate = null,
+		workStartedDate,
+		completeDate,
+		infoTechApprover = null,
+		infoTechApprDate = null
+	) {
+		this.requestor = requestor;
+		this.applicationName = applicationName;
+		this.applicationFunction = applicationFunction;
+		this.subject = subject;
+		this.status = status;
+		this.description = description;
+		this.reasonForChange = reasonForChange;
+		this.changeType = changeType;
+		this.priority = priority;
+		this.refNumber = refNumber;
+		this.requestDate = requestDate;
+		this.requestedDueDate = requestedDueDate;
+		this.department = department;
+		this.workflowFlag = workflowFlag;
+		this.deptApprover = deptApprover;
+		this.deptApprDate = deptApprDate;
+		this.workStartedDate = workStartedDate;
+		this.completeDate = completeDate;
+		this.infoTechApprover = infoTechApprover;
+		this.infoTechApprDate = infoTechApprDate;
+    },
+
+    type: 'ModTrak'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-23 17:32:35</sys_created_on>
+        <sys_id>281363a71b9156103f31a9b6624bcb49</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ModTrak</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_script_include_281363a71b9156103f31a9b6624bcb49</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:57</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</application>
+        <file_path/>
+        <instance_id>58b11994db81b010c6e711f84896190f</instance_id>
+        <instance_name>nyudev2</instance_name>
+        <name>sys_script_include_281363a71b9156103f31a9b6624bcb49</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_neyu_modtrak.ModTrak&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;ModTrak&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var ModTrak = Class.create();
+ModTrak.prototype = {
+    initialize: function(
+		requestor,
+		applicationName,
+		applicationFunction = null,
+		subject,
+		status,
+		description,
+		reasonForChange,
+		changeType,
+		priority,
+		refNumber,
+		requestDate,
+		requestedDueDate,
+		department,
+		workflowFlag = "Y",
+		deptApprover = null,
+		deptApprDate = null,
+		workStartedDate,
+		completeDate,
+		infoTechApprover = null,
+		infoTechApprDate = null
+	) {
+		this.requestor = requestor;
+		this.applicationName = applicationName;
+		this.applicationFunction = applicationFunction;
+		this.subject = subject;
+		this.status = status;
+		this.description = description;
+		this.reasonForChange = reasonForChange;
+		this.changeType = changeType;
+		this.priority = priority;
+		this.refNumber = refNumber;
+		this.requestDate = requestDate;
+		this.requestedDueDate = requestedDueDate;
+		this.department = department;
+		this.workflowFlag = workflowFlag;
+		this.deptApprover = deptApprover;
+		this.deptApprDate = deptApprDate;
+		this.workStartedDate = workStartedDate;
+		this.completeDate = completeDate;
+		this.infoTechApprover = infoTechApprover;
+		this.infoTechApprDate = infoTechApprDate;
+    },
+
+    type: 'ModTrak'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ab7289&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-10-23 17:32:35&lt;/sys_created_on&gt;&lt;sys_id&gt;281363a71b9156103f31a9b6624bcb49&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;ModTrak&lt;/sys_name&gt;&lt;sys_package display_value="ModTrak" source="x_neyu_modtrak"&gt;40834d4f1b1d12108ef92f81b24bcb7f&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="ModTrak"&gt;40834d4f1b1d12108ef92f81b24bcb7f&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_281363a71b9156103f31a9b6624bcb49&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;ab7289&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-10-23 17:35:57&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1986695115</payload_hash>
+        <record_name>ModTrak</record_name>
+        <reverted_from/>
+        <source>c1a3098f1b1d12108ef92f81b24bcb67</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:57</sys_created_on>
+        <sys_id>b2d4e76b1b9156103f31a9b6624bcb58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192ba7314c10000001</sys_recorded_at>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:57</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>76d4e76bd6915610804b2fa52c9acb57</update_guid>
+        <update_guid_history>76d4e76bd6915610804b2fa52c9acb57:-1986695115,f9146b2bdb915610fee364677d4f1034:918233175</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-23 18:18:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>2ce99ea8cc31491d980dc502c9625d11</sys_id>
+        <sys_metadata>281363a71b9156103f31a9b6624bcb49</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ModTrak</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_scope_delete display_value="">5d706e2f6a514770a3b89eef580fae40</sys_scope_delete>
+        <sys_update_name>sys_script_include_281363a71b9156103f31a9b6624bcb49</sys_update_name>
+        <sys_update_version display_value="sys_script_include_281363a71b9156103f31a9b6624bcb49">b2d4e76b1b9156103f31a9b6624bcb58</sys_update_version>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-23 18:18:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

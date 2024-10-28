@@ -52,14 +52,14 @@ ChangeHelper.prototype = {
     },
 
     _createStdChange: function(params) {
-        var templateId = params.template_id;
+        const templateId = params.template_id;
         delete params.template_id;
 
         var stdChangeProcess = global.StandardChangeProcess
             .newChangeProcess(templateId, params);
         stdChangeProcess.insert();
 
-        var result = {
+        const result = {
             data: {
                 sys_id: stdChangeProcess.getGlideRecord().getValue("sys_id"),
                 number: stdChangeProcess.getGlideRecord().getValue("number")
@@ -80,7 +80,7 @@ ChangeHelper.prototype = {
 
         changeGR.setValue("correlation_display", ChangeHelper.CORRELATION_KEY);
         // set change model
-        var chgModel = this._findChgModel(params.type);
+        const chgModel = this._findChgModel(params.type);
         if (gs.nil(chgModel)) {
             return {
                 error: true,
@@ -91,7 +91,7 @@ ChangeHelper.prototype = {
 
         changeGR.setValue("model", chgModel);
         changeGR.insert();
-        var result = {
+        const result = {
             data: {
                 sys_id: changeGR.getValue("sys_id"),
                 number: changeGR.getValue("number")
@@ -100,20 +100,20 @@ ChangeHelper.prototype = {
         return result;
     },
 
-	_resolveValue: function(value, key) {
-		switch (key) {
-			case "requested_by":
-				var userGR = new GlideRecordSecure("sys_user");
-				userGR.get("user_name", value);
-				return userGR.getValue("sys_id");
-			case "service_offering":
-				var svcGR = new GlideRecordSecure("service_offering");
-				svcGR.get("name", value);
-				return svcGR.getValue("sys_id");
-			default:
-				return value;
-		}
-	},
+    _resolveValue: function(value, key) {
+        switch (key) {
+            case "requested_by":
+                var userGR = new GlideRecordSecure("sys_user");
+                userGR.get("user_name", value);
+                return userGR.getValue("sys_id");
+            case "service_offering":
+                var svcGR = new GlideRecordSecure("service_offering");
+                svcGR.get("name", value);
+                return svcGR.getValue("sys_id");
+            default:
+                return value;
+        }
+    },
 
     _findChgModel: function(type) {
         var chgModel = new GlideRecordSecure("chg_model");
@@ -146,13 +146,13 @@ ChangeHelper.POST_PARAMS_MAP = {
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-25 17:50:32</sys_created_on>
         <sys_id>0efabdd41ba15a103f31a9b6624bcb13</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>ChangeHelper</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_0efabdd41ba15a103f31a9b6624bcb13</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-10-25 20:52:21</sys_updated_on>
+        <sys_updated_on>2024-10-27 19:04:19</sys_updated_on>
     </sys_script_include>
 </record_update>

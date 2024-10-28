@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
+    <sys_ws_query_parameter action="INSERT_OR_UPDATE">
+        <example_value>"ab79800c1b29d61058b553de1d4bcb7a" or "CHG0030048"</example_value>
+        <name>number</name>
+        <required>false</required>
+        <short_description>The Change Number or SYS_ID of the Change record to update.</short_description>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-28 16:59:01</sys_created_on>
+        <sys_id>5b3c8dd91ba1de103f31a9b6624bcb9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>number</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_5b3c8dd91ba1de103f31a9b6624bcb9d</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-28 16:59:01</sys_updated_on>
+        <web_service_definition display_value="ModTrak to Change">52e679501ba15a103f31a9b6624bcbee</web_service_definition>
+    </sys_ws_query_parameter>
+</record_update>

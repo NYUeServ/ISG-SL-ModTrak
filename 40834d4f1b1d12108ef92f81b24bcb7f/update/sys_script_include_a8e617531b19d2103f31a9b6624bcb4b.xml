@@ -15,25 +15,25 @@ ModTrakAPI.prototype = {
         this.wsUtil = new WebServiceUtil(this.mid, this.debug);
     },
 
-	/**
-	 * Required fields:
-	 * applicationName
-		subject
-		priority
-		refNumber
-		requestor
-		requestDate
-		requestedDueDate
-		status // Has to be either REQUEST or COMPLETED
+    /**
+     * Required fields:
+     * applicationName
+    	subject
+    	priority
+    	refNumber
+    	requestor
+    	requestDate
+    	requestedDueDate
+    	status // Has to be either REQUEST or COMPLETED
 
-		// If status == COMPLETED the following fields are also mandatory:
-		deptApprover
-		deptApprDate
-		infoTechApprover
-		infoTechApprDate
-		completeDate
-		workStartedDate
-	 */
+    	// If status == COMPLETED the following fields are also mandatory:
+    	deptApprover
+    	deptApprDate
+    	infoTechApprover
+    	infoTechApprDate
+    	completeDate
+    	workStartedDate
+     */
     create: function(
         requestor,
         applicationName,
@@ -91,8 +91,27 @@ ModTrakAPI.prototype = {
         return response;
     },
 
-    status: function() {
-        // placeholder function to get the status of a ModTrak
+    status: function(changeNumber, approveHistory) {
+        if (this.debug) {
+            gs.info("ModTrak Status Check\nchangeNumber: " + changeNumber +
+                "\napproveHistory: " + approveHistory);
+        }
+
+        var attrs = new Object();
+        attrs["changeNumber"] = changeNumber;
+        arrts["approveHistory"] = approveHistory;
+
+        const response = this.wsUtil.rest(
+            ModTrakAPI.CONSTANTS.API.SEARCH.name,
+            ModTrakAPI.CONSTANTS.API.SEARCH.method,
+            attrs
+        );
+
+        if (response.error) {
+            gs.error("ModTrak Search returned an error.\nError: {0}", response.errorMessage);
+        }
+
+        return response;
     },
 
     type: 'ModTrakAPI'
@@ -109,20 +128,21 @@ ModTrakAPI.CONSTANTS = {
             name: "ModTrak",
             method: "Search ModTrak"
         }
-    }
+    },
+	CORRELATION_DISPLAY: "ModTrak"
 
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-22 21:57:22</sys_created_on>
         <sys_id>a8e617531b19d2103f31a9b6624bcb4b</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>ModTrakAPI</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_a8e617531b19d2103f31a9b6624bcb4b</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-10-28 19:50:23</sys_updated_on>
+        <sys_updated_on>2024-10-29 15:40:38</sys_updated_on>
     </sys_script_include>
 </record_update>

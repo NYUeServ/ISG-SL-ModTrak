@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_application_function" label="Application Function" language="en" table="var__m_var_dictionary_9f4614421ba116503f31a9b6624bcbd9">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_application_function</element>
+            <help/>
+            <hint/>
+            <label>Application Function</label>
+            <language>en</language>
+            <name>var__m_var_dictionary_9f4614421ba116503f31a9b6624bcbd9</name>
+            <plural>Application Function</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>ab7289</sys_created_by>
+            <sys_created_on>2024-10-30 20:59:31</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Application Function</sys_name>
+            <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+            <sys_update_name>sys_documentation_var__m_var_dictionary_9f4614421ba116503f31a9b6624bcbd9_u_application_function_en</sys_update_name>
+            <sys_updated_by>ab7289</sys_updated_by>
+            <sys_updated_on>2024-10-30 20:59:31</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -21,10 +21,28 @@ ChangeHelper.prototype = {
      */
     validateChangePOST: function(request) {
 
-        if (gs.nil(request.modtrak_number)) {
+        // get required keys depending on whether template_id is included or not
+        const requiredKeys = Object.hasOwn(request, "template_id") ?
+            ChangeHelper.REQ_TEMPLATE_PARAMS :
+            Object.keys(ChangeHelper.POST_PARAMS_MAP);
+
+        // find all the required keys that are not present in the request
+        const missingKeys = requiredKeys.filter((k) => !Object.hasOwn(request, k));
+
+        if (missingKeys && missingKeys.length > 0) {
             return {
                 error: true,
-                errorMessage: "ModTrak Number is required.",
+                errorMessage: missingKeys.map((k) => `${k} is required`).join("\n"),
+                status: 400
+            };
+        }
+
+		// check that standard change template is valid
+        if (Object.hasOwn(request, "template_id") &&
+            gs.nil(global.StandardChangeTemplate.findById(request.template_id))) {
+            return {
+                error: true,
+                errorMessage: "template is not valid",
                 status: 400
             };
         }
@@ -141,18 +159,25 @@ ChangeHelper.POST_PARAMS_MAP = {
     "requested_by_date": "requested_by_date",
     "service_offering": "service_offering",
     "state": "state"
-};]]></script>
+};
+ChangeHelper.REQ_TEMPLATE_PARAMS = [
+    "template_id",
+    "requested_by",
+    "start_date",
+    "modtrak_number",
+    "requested_by_date",
+];]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-25 17:50:32</sys_created_on>
         <sys_id>0efabdd41ba15a103f31a9b6624bcb13</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>ChangeHelper</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_0efabdd41ba15a103f31a9b6624bcb13</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-10-27 19:04:19</sys_updated_on>
+        <sys_updated_on>2024-11-04 17:05:27</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -29,20 +29,37 @@ WebServiceUtil.prototype = {
      *                      and stringParameterValue to be passed into the RESTMessage but not escaped
      * @return the response parsed as a JSON object
      */
-    rest: function(
-        restMessage,
-        restMethod,
-        attrs = {},
-        attrsNoEscape = {}
-    ) {
-        if (gs.nil(restMessage) || gs.nil(restMethod)) {
+	rest: function(
+		restMessage,
+		restMethod,
+		attrs = {},
+		attrsNoEscape = {}
+	) {
+		if (gs.nil(restMessage) || gs.nil(restMethod)) {
             gs.error("restMessage and restMethod are required");
             return {
                 error: true,
                 errorMessage: "restMessage and restMethod are required"
             };
         }
-		
+		// convenience method to facilitate automated testing
+		return this._rest(
+			restMessage,
+			restMethod,
+			attrs,
+			attrsNoEscape,
+			new sn_ws.RESTMessageV2(restMessage, restMethod)
+		);
+	},
+
+
+    _rest: function(
+        restMessage,
+        restMethod,
+        attrs = {},
+        attrsNoEscape = {},
+		rest
+    ) {
 		if (this.debug) {
             gs.info("Calling {0} {1}\nattrs: {2}\nattrsNoEscape:{3}",
                 restMessage,
@@ -71,11 +88,10 @@ WebServiceUtil.prototype = {
             responseBody,
             response,
             status,
-            rest,
             jObj;
 
         try {
-            rest = new sn_ws.RESTMessageV2(restMessage, restMethod);
+            //rest = new sn_ws.RESTMessageV2(restMessage, restMethod);
 
             // set string parameters
             Object.keys(attrs).forEach((k) =>
@@ -97,10 +113,13 @@ WebServiceUtil.prototype = {
                 rest.setMIDServer(this.mid);
             }
 
+			gs.info("pre-execute");
             response = rest.execute();
+			gs.info("post-execute");
             responseBody = response.getBody();
+			gs.info("post-getBody, pre-getStatusCode");
             status = response.getStatusCode();
-
+			gs.info("got status code");
             jObj = this.json.decode(responseBody);
         } catch (ex) {
             var err = "There was an internal error when attempting to contact ";
@@ -145,13 +164,13 @@ WebServiceUtil.prototype = {
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-22 23:05:29</sys_created_on>
         <sys_id>9585271b1b59d2103f31a9b6624bcbe3</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>WebServiceUtil</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_9585271b1b59d2103f31a9b6624bcbe3</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-01 16:26:39</sys_updated_on>
+        <sys_updated_on>2024-11-05 22:23:00</sys_updated_on>
     </sys_script_include>
 </record_update>

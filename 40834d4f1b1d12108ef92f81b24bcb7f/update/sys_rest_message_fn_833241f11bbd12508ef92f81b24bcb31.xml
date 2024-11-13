@@ -11,20 +11,20 @@
         <oauth2_profile/>
         <protocol_name/>
         <qualified_name>ModTrak [ Search ModTrak ]</qualified_name>
-        <rest_endpoint>https://${host}/chngmgmtapp/mtservice/searchmt/${modtrak}</rest_endpoint>
+        <rest_endpoint>https://${host}/chngmgmtapp/mtservice/searchmt/${changeNumber}</rest_endpoint>
         <rest_message display_value="ModTrak">8d1c761b1b55d2103f31a9b6624bcbfc</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-11 15:49:38</sys_created_on>
         <sys_id>833241f11bbd12508ef92f81b24bcb31</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Search ModTrak</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_rest_message_fn_833241f11bbd12508ef92f81b24bcb31</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-11 15:49:38</sys_updated_on>
+        <sys_updated_on>2024-11-13 16:14:41</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server display_value="NYUDEV2-AWS">045256301b693110350efe261a4bcb26</use_mid_server>
         <use_mutual_auth>false</use_mutual_auth>

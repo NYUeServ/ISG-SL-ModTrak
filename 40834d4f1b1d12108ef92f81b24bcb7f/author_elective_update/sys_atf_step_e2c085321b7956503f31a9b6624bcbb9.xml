@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Assert a response payload element '/error/message' is 'template_id is required'</description>
+        <display_name>Assert XML Response Payload Element</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>12</order>
+        <step_config display_value="Assert XML Response Payload Element">7b403b079f132200ef4afa7dc67fcf8c</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:15:23</sys_created_on>
+        <sys_id>e2c085321b7956503f31a9b6624bcbb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assert XML Response Payload Element</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_atf_step_e2c085321b7956503f31a9b6624bcbb9</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:15:23</sys_updated_on>
+        <table/>
+        <test display_value="ModTrak API POST STD CHG Test - Invalid Body">d77f70be1b3956503f31a9b6624bcb10</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=e2c085321b7956503f31a9b6624bcbb9"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>e2c085321b7956503f31a9b6624bcbb9</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:15:23</sys_created_on>
+        <sys_id>3ed089321b7956503f31a9b6624bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:15:23</sys_updated_on>
+        <value>template_id is required</value>
+        <variable display_value="Value">d9dfab959f232200ef4afa7dc67fcf2c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>e2c085321b7956503f31a9b6624bcbb9</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:15:23</sys_created_on>
+        <sys_id>b2d089321b7956503f31a9b6624bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:15:23</sys_updated_on>
+        <value>/error/message</value>
+        <variable display_value="Element path">9afdef559f232200ef4afa7dc67fcf6a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>e2c085321b7956503f31a9b6624bcbb9</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:15:23</sys_created_on>
+        <sys_id>fed089321b7956503f31a9b6624bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:15:23</sys_updated_on>
+        <value>equals</value>
+        <variable display_value="Operation">588e23959f232200ef4afa7dc67fcfd4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_atf_input_variable_7b403b079f132200ef4afa7dc67fcf8c^id=e2c085321b7956503f31a9b6624bcbb9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</application>
+        <file_path/>
+        <instance_id>58b11994db81b010c6e711f84896190f</instance_id>
+        <instance_name>nyudev2</instance_name>
+        <name>sys_atf_step_e2c085321b7956503f31a9b6624bcbb9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Assert a response payload element '/error/message' is 'template_id is required'</description><display_name>Assert XML Response Payload Element</display_name><inputs/><mugshots_cache_json/><notes/><order>12</order><step_config display_value="Assert XML Response Payload Element">7b403b079f132200ef4afa7dc67fcf8c</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>ab7289</sys_created_by><sys_created_on>2024-11-14 18:15:23</sys_created_on><sys_id>e2c085321b7956503f31a9b6624bcbb9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Assert XML Response Payload Element</sys_name><sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package><sys_policy/><sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope><sys_update_name>sys_atf_step_e2c085321b7956503f31a9b6624bcbb9</sys_update_name><sys_updated_by>ab7289</sys_updated_by><sys_updated_on>2024-11-14 18:15:23</sys_updated_on><table/><test display_value="ModTrak API POST STD CHG Test - Invalid Body">d77f70be1b3956503f31a9b6624bcb10</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=e2c085321b7956503f31a9b6624bcbb9"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>e2c085321b7956503f31a9b6624bcbb9</document_key><order>120</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>ab7289</sys_created_by><sys_created_on>2024-11-14 18:15:23</sys_created_on><sys_id>3ed089321b7956503f31a9b6624bcbb2</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>ab7289</sys_updated_by><sys_updated_on>2024-11-14 18:15:23</sys_updated_on><value>template_id is required</value><variable display_value="Value">d9dfab959f232200ef4afa7dc67fcf2c</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>e2c085321b7956503f31a9b6624bcbb9</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>ab7289</sys_created_by><sys_created_on>2024-11-14 18:15:23</sys_created_on><sys_id>b2d089321b7956503f31a9b6624bcbb3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>ab7289</sys_updated_by><sys_updated_on>2024-11-14 18:15:23</sys_updated_on><value>/error/message</value><variable display_value="Element path">9afdef559f232200ef4afa7dc67fcf6a</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>e2c085321b7956503f31a9b6624bcbb9</document_key><order>110</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>ab7289</sys_created_by><sys_created_on>2024-11-14 18:15:23</sys_created_on><sys_id>fed089321b7956503f31a9b6624bcbb2</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>ab7289</sys_updated_by><sys_updated_on>2024-11-14 18:15:23</sys_updated_on><value>equals</value><variable display_value="Operation">588e23959f232200ef4afa7dc67fcfd4</variable></sys_variable_value><sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_7b403b079f132200ef4afa7dc67fcf8c^id=e2c085321b7956503f31a9b6624bcbb9"/></record_update>]]></payload>
+        <payload_hash>-1837336245</payload_hash>
+        <record_name>Assert XML Response Payload Element</record_name>
+        <reverted_from/>
+        <source>c1a3098f1b1d12108ef92f81b24bcb67</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:15:23</sys_created_on>
+        <sys_id>bad089321b7956503f31a9b6624bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1932be3174f0000001</sys_recorded_at>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:15:23</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>7ed0893266795650168a74e53c4db2b4</update_guid>
+        <update_guid_history>7ed0893266795650168a74e53c4db2b4:-1837336245</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:17:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>044b98f4db874e7a98c2fc622e462bf9</sys_id>
+        <sys_metadata>e2c085321b7956503f31a9b6624bcbb9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assert XML Response Payload Element</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_scope_delete display_value="">5d706e2f6a514770a3b89eef580fae40</sys_scope_delete>
+        <sys_update_name>sys_atf_step_e2c085321b7956503f31a9b6624bcbb9</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_e2c085321b7956503f31a9b6624bcbb9">bad089321b7956503f31a9b6624bcbb5</sys_update_version>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:17:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

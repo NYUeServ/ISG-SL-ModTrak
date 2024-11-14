@@ -2,58 +2,58 @@
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
         <copied_from/>
-        <description>Assert a response status code is '200'</description>
+        <description>Assert a response status code is '403'</description>
         <display_name>Assert Status Code</display_name>
         <inputs/>
         <mugshots_cache_json/>
         <notes/>
-        <order>5</order>
+        <order>4</order>
         <step_config display_value="Assert Status Code">2f4fa7309f132200ef4afa7dc67fcf0f</step_config>
         <sys_class_name>sys_atf_step</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
-        <sys_created_on>2024-11-06 17:07:43</sys_created_on>
-        <sys_id>f594a7841bb11a108ef92f81b24bcbbb</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_created_on>2024-11-14 18:26:28</sys_created_on>
+        <sys_id>98630d361b7956503f31a9b6624bcbd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Assert Status Code</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name>sys_atf_step_f594a7841bb11a108ef92f81b24bcbbb</sys_update_name>
+        <sys_update_name>sys_atf_step_98630d361b7956503f31a9b6624bcbd9</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <sys_updated_on>2024-11-14 18:26:28</sys_updated_on>
         <table/>
-        <test display_value="ModTrak /import_change POST Normal CHG Test">60916fc01bb11a108ef92f81b24bcb4f</test>
+        <test display_value="ModTrak /import_change Authentication Test">3e7209f21b7956503f31a9b6624bcb8e</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>
-    <sys_variable_value action="delete_multiple" query="document_key=f594a7841bb11a108ef92f81b24bcbbb"/>
+    <sys_variable_value action="delete_multiple" query="document_key=98630d361b7956503f31a9b6624bcbd9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
-        <document_key>f594a7841bb11a108ef92f81b24bcbbb</document_key>
+        <document_key>98630d361b7956503f31a9b6624bcbd9</document_key>
         <order>110</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
-        <sys_created_on>2024-11-06 17:07:43</sys_created_on>
-        <sys_id>71a4ebc41bb11a108ef92f81b24bcb73</sys_id>
+        <sys_created_on>2024-11-14 18:26:28</sys_created_on>
+        <sys_id>59638d361b7956503f31a9b6624bcbc3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-06 17:07:43</sys_updated_on>
-        <value>200</value>
+        <sys_updated_on>2024-11-14 18:26:28</sys_updated_on>
+        <value>403</value>
         <variable display_value="Status code">9f5f67709f132200ef4afa7dc67fcf94</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
-        <document_key>f594a7841bb11a108ef92f81b24bcbbb</document_key>
+        <document_key>98630d361b7956503f31a9b6624bcbd9</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
-        <sys_created_on>2024-11-06 17:07:43</sys_created_on>
-        <sys_id>bda4ebc41bb11a108ef92f81b24bcb72</sys_id>
+        <sys_created_on>2024-11-14 18:26:28</sys_created_on>
+        <sys_id>95638d361b7956503f31a9b6624bcbc3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-06 17:07:43</sys_updated_on>
+        <sys_updated_on>2024-11-14 18:26:28</sys_updated_on>
         <value>equals</value>
         <variable display_value="Operation">1d94cb1f3b8032000774229c93efc419</variable>
     </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_2f4fa7309f132200ef4afa7dc67fcf0f^id=f594a7841bb11a108ef92f81b24bcbbb"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_2f4fa7309f132200ef4afa7dc67fcf0f^id=98630d361b7956503f31a9b6624bcbd9"/>
 </record_update>

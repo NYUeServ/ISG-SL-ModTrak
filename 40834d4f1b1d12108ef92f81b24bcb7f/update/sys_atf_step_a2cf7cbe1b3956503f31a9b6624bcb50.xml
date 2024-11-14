@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Assert a response payload element '/error/message' is 'modtrak_number is required'</description>
+        <display_name>Assert JSON Response Payload Element</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes>Ensure error message is appropriate</notes>
+        <order>8</order>
+        <step_config display_value="Assert JSON Response Payload Element">afc114199f132200ef4afa7dc67fcf64</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:11:06</sys_created_on>
+        <sys_id>a2cf7cbe1b3956503f31a9b6624bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assert JSON Response Payload Element</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_atf_step_a2cf7cbe1b3956503f31a9b6624bcb50</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:11:06</sys_updated_on>
+        <table/>
+        <test display_value="ModTrak /import_change POST STD CHG Test - Invalid Body">d77f70be1b3956503f31a9b6624bcb10</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=a2cf7cbe1b3956503f31a9b6624bcb50"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>a2cf7cbe1b3956503f31a9b6624bcb50</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:11:06</sys_created_on>
+        <sys_id>9cef3cbe1b3956503f31a9b6624bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:11:06</sys_updated_on>
+        <value>/error/message</value>
+        <variable display_value="Element path">5a9258199f132200ef4afa7dc67fcfb4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>a2cf7cbe1b3956503f31a9b6624bcb50</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:11:06</sys_created_on>
+        <sys_id>d0ef3cbe1b3956503f31a9b6624bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:11:06</sys_updated_on>
+        <value>modtrak_number is required</value>
+        <variable display_value="Value">7b139c199f132200ef4afa7dc67fcfb3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>a2cf7cbe1b3956503f31a9b6624bcb50</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:11:06</sys_created_on>
+        <sys_id>d8ef3cbe1b3956503f31a9b6624bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:11:06</sys_updated_on>
+        <value>equals</value>
+        <variable display_value="Operation">2db298199f132200ef4afa7dc67fcfbc</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_afc114199f132200ef4afa7dc67fcf64^id=a2cf7cbe1b3956503f31a9b6624bcb50"/>
+</record_update>

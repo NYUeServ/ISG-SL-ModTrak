@@ -13,14 +13,14 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-04 15:46:15</sys_created_on>
         <sys_id>b6fdb8ef1b6516108ef92f81b24bcb3c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_atf_step_b6fdb8ef1b6516108ef92f81b24bcb3c</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-04 17:43:56</sys_updated_on>
+        <sys_updated_on>2024-12-05 20:54:08</sys_updated_on>
         <table/>
         <test display_value="ModTrak ChangeHelper Script Include Tests">efcd38ef1b6516108ef92f81b24bcb83</test>
         <timeout/>
@@ -35,9 +35,9 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-04 15:46:15</sys_created_on>
         <sys_id>81de30631ba516108ef92f81b24bcbba</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-04 17:43:56</sys_updated_on>
+        <sys_updated_on>2024-12-05 20:54:08</sys_updated_on>
         <value>(function(outputs, steps, params, stepResult, assertEqual) {&#13;
 &#13;
     describe("ModTrak ChangeHelper Tests", function() {&#13;
@@ -49,7 +49,7 @@
                 "requested_by": "tp1406",&#13;
                 "short_description": "test",&#13;
                 "start_date": "2024-10-21 00:00:00",&#13;
-                "requested_by_date": "2024-10-30 00:00:00",&#13;
+                "end_date": "2024-10-30 00:00:00",&#13;
                 "state": "-5",&#13;
                 "type": "standard",&#13;
             };&#13;
@@ -71,7 +71,7 @@
                 "requested_by": "ab7289",&#13;
                 "start_date": new GlideDateTime(),&#13;
                 // "modtrak_number": "12345",&#13;
-                // "requested_by_date": new GlideDateTime(),&#13;
+                // "end_date": new GlideDateTime(),&#13;
             };&#13;
 &#13;
             var api = new x_neyu_modtrak.ChangeHelper();&#13;
@@ -79,7 +79,7 @@
 &#13;
             expect(response).toEqual({&#13;
                 error: true,&#13;
-                errorMessage: "modtrak_number is required\nrequested_by_date is required",&#13;
+                errorMessage: "modtrak_number is required\nend_date is required",&#13;
                 status: 400&#13;
             });&#13;
         });&#13;
@@ -90,7 +90,7 @@
                 "requested_by": "ab7289",&#13;
                 "start_date": new GlideDateTime(),&#13;
                 "modtrak_number": "12345",&#13;
-                "requested_by_date": new GlideDateTime(),&#13;
+                "end_date": new GlideDateTime(),&#13;
             };&#13;
 &#13;
             var api = new x_neyu_modtrak.ChangeHelper();&#13;
@@ -108,7 +108,7 @@
                 "requested_by": "tp1406",&#13;
                 "short_description": "test",&#13;
                 "start_date": "2024-10-21 00:00:00",&#13;
-                "requested_by_date": "2024-10-30 00:00:00",&#13;
+                "end_date": "2024-10-30 00:00:00",&#13;
                 "service_offering": "NYU Wi-Fi",&#13;
                 "state": "-5",&#13;
                 "type": "standard",&#13;
@@ -130,7 +130,7 @@
                 "requested_by": "ab7289",&#13;
                 "start_date": new GlideDateTime(),&#13;
                 "modtrak_number": "12345",&#13;
-                "requested_by_date": new GlideDateTime(),&#13;
+                "end_date": new GlideDateTime(),&#13;
             };&#13;
 &#13;
             var api = new x_neyu_modtrak.ChangeHelper();&#13;
@@ -149,7 +149,7 @@
                 "requested_by": "ab7289",&#13;
                 "start_date": new GlideDateTime(),&#13;
                 "modtrak_number": "12345",&#13;
-                "requested_by_date": new GlideDateTime(),&#13;
+                "end_date": new GlideDateTime(),&#13;
             };&#13;
 &#13;
             var api = new x_neyu_modtrak.ChangeHelper();&#13;

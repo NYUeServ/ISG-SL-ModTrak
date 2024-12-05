@@ -160,28 +160,28 @@ ChangeHelper.POST_PARAMS_MAP = {
     "description": "description",
     "start_date": "start_date",
     "modtrak_number": "correlation_id",
-    "requested_by_date": "requested_by_date",
     "service_offering": "service_offering",
-    "state": "state"
+    "state": "state",
+	"end_date": "end_date"
 };
 ChangeHelper.REQ_TEMPLATE_PARAMS = [
     "template_id",
     "requested_by",
     "start_date",
     "modtrak_number",
-    "requested_by_date",
+    "end_date",
 ];]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-25 17:50:32</sys_created_on>
         <sys_id>0efabdd41ba15a103f31a9b6624bcb13</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>ChangeHelper</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_0efabdd41ba15a103f31a9b6624bcb13</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-05 21:15:49</sys_updated_on>
+        <sys_updated_on>2024-12-05 20:56:36</sys_updated_on>
     </sys_script_include>
 </record_update>

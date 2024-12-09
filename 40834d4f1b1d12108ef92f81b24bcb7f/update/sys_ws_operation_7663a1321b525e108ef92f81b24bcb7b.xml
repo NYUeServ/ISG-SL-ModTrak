@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>35f775d01ba15a103f31a9b6624bcb0c</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Close Change</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var data = request.body.data;
+    var util = new x_neyu_modtrak.ChangeHelper();
+
+    // ensure the request is valid
+    var validated = util.validateClosePOST(data);
+    if (validated.error) {
+        gs.error(JSON.stringify(validated));
+
+        return buildError(validated);
+    } else {
+        const result = util.createCloseRequest(data);
+
+        // see if there was an issue in creating the request
+        if (result.error) {
+            gs.info(JSON.stringify(result));
+            return buildError(result);
+        } else {
+            // success, return Created
+            response.setStatus(201);
+            response.setBody(result.data);
+        }
+    }
+
+    function buildError(data) {
+        var responseError = new sn_ws_err.ServiceError();
+        responseError.setStatus(data.status);
+        responseError.setMessage(data.errorMessage);
+        return responseError;
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_neyu_modtrak/close_change</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-12-09 17:19:05</sys_created_on>
+        <sys_id>7663a1321b525e108ef92f81b24bcb7b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Close Change</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_ws_operation_7663a1321b525e108ef92f81b24bcb7b</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-09 19:07:26</sys_updated_on>
+        <web_service_definition display_value="Close Change">b4432dfe1b125e108ef92f81b24bcb73</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

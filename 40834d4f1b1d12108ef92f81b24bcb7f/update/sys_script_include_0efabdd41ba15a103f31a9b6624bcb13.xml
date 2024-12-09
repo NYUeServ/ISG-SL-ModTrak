@@ -55,6 +55,94 @@ ChangeHelper.prototype = {
     },
 
     /**
+     * Validates that required fields are present in the request
+     * 
+     * @returns - {object} object containing whether there was an error
+     * 				and any missing fields
+     */
+    validateClosePOST: function(request) {
+        const requiredKeys = ChangeHelper.CLOSE_REQ_PARAMS;
+
+        const missingKeys = requiredKeys.filter((k) => !Object.hasOwn(request, k));
+
+        if (missingKeys && missingKeys.length > 0) {
+            return {
+                error: true,
+                errorMessage: missingKeys.map((k) => `${k} is required`).join("\n"),
+                status: 400
+            };
+        }
+
+        return {
+            error: false,
+            errorMessage: ""
+        };
+    },
+
+    /**
+     * Validates that the indicated ModTrak is valid and submits
+     * an Update Request to close the Change.
+     */
+    createCloseRequest: function(request) {
+		// TODO check to see if there isn't already a close request for the spsecified change
+        const changeGR = new GlideRecordSecure("change_request");
+        changeGR.addQuery("correlation_display", ChangeHelper.CORRELATION_KEY);
+        changeGR.addQuery("correlation_id", request.modtrak_number);
+        changeGR.setLimit(1);
+        changeGR.query();
+
+        if (changeGR.next()) {
+			// check to see if a request hasn't already been created
+			if (this._closeRequestExists(changeGR)) {
+				return {
+					error: true,
+					status: 400,
+					errorMessage: "A Close Request has already been created."
+				};
+			}
+
+            // create an Update Request record, which will handle closing the change
+            const updateReq = new GlideRecordSecure(ChangeHelper.CLOSE_REQ_TABLE);
+            updateReq.initialize();
+            updateReq.setValue("change_request", changeGR.getValue("sys_id"));
+            updateReq.setValue("short_description", "Close Request for ModTrak " + request.modtrak_number);
+			updateReq.setValue("closure_state", request.state);
+
+            const reqId = updateReq.insert();
+            if (gs.nil(reqId)) {
+                // there was an error inserting the record
+                return {
+                    error: true,
+                    status: 500,
+                    errorMessage: updateReq.getLastErrorMessage()
+                };
+            }
+            // all good!
+            return {
+                error: false,
+                errorMessage: "",
+                data: {
+                    close_request_id: reqId
+                }
+            };
+        } else {
+            return {
+                error: true,
+                errorMessage: "Unable to location ModTrak " + request.modtrak_number,
+                status: 400
+            };
+        }
+    },
+
+	_closeRequestExists: function(changeGR) {
+		const reqGR = new GlideRecord(ChangeHelper.CLOSE_REQ_TABLE);
+		reqGR.addQuery("change_request", changeGR.getUniqueValue());
+		reqGR.query();
+
+		return reqGR.hasNext();
+	},
+
+    /**
      * Creates a new change request given the validated request data
      * 
      * @param request {object} - the HTTP POST Request Body
@@ -79,6 +167,9 @@ ChangeHelper.prototype = {
         stdChangeProcess.setValue("correlation_display",
             x_neyu_modtrak.ModTrakAPI.CONSTANTS.CORRELATION_DISPLAY);
         stdChangeProcess.setValue("correlation_id", params.modtrak_number);
+        // standard changes default risk & impact to low
+        stdChangeProcess.setValue("risk", 4);
+        stdChangeProcess.setValue("impact", 3);
         stdChangeProcess.insert();
 
         const result = {
@@ -154,6 +245,7 @@ ChangeHelper.prototype = {
 };
 
 ChangeHelper.CORRELATION_KEY = "ModTrak";
+ChangeHelper.CLOSE_REQ_TABLE = "x_neyu_modtrak_update_request";
 ChangeHelper.POST_PARAMS_MAP = {
     "requested_by": "requested_by",
     "short_description": "short_description",
@@ -162,7 +254,7 @@ ChangeHelper.POST_PARAMS_MAP = {
     "modtrak_number": "correlation_id",
     "service_offering": "service_offering",
     "state": "state",
-	"end_date": "end_date"
+    "end_date": "end_date"
 };
 ChangeHelper.REQ_TEMPLATE_PARAMS = [
     "template_id",
@@ -170,18 +262,22 @@ ChangeHelper.REQ_TEMPLATE_PARAMS = [
     "start_date",
     "modtrak_number",
     "end_date",
+];
+ChangeHelper.CLOSE_REQ_PARAMS = [
+    "modtrak_number",
+	"state"
 ];]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-25 17:50:32</sys_created_on>
         <sys_id>0efabdd41ba15a103f31a9b6624bcb13</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name>ChangeHelper</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_0efabdd41ba15a103f31a9b6624bcb13</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-05 20:56:36</sys_updated_on>
+        <sys_updated_on>2024-12-09 20:23:59</sys_updated_on>
     </sys_script_include>
 </record_update>

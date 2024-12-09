@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="DELETE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>35f775d01ba15a103f31a9b6624bcb0c</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Close Change</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var data = request.body.data;
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_neyu_modtrak/import_change/close_change</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/close_change</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-12-09 17:15:42</sys_created_on>
+        <sys_id>6a82e1fe1b125e108ef92f81b24bcb36</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Close Change</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_ws_operation_6a82e1fe1b125e108ef92f81b24bcb36</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-09 17:15:42</sys_updated_on>
+        <web_service_definition display_value="ModTrak to Change">52e679501ba15a103f31a9b6624bcbee</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</application>
+        <file_path/>
+        <instance_id>58b11994db81b010c6e711f84896190f</instance_id>
+        <instance_name>nyudev2</instance_name>
+        <name>sys_ws_operation_6a82e1fe1b125e108ef92f81b24bcb36</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;35f775d01ba15a103f31a9b6624bcb0c&lt;/enforce_acl&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;Close Change&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var data = request.body.data;
+
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/x_neyu_modtrak/import_change/close_change&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/close_change&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ab7289&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-09 17:15:42&lt;/sys_created_on&gt;&lt;sys_id&gt;6a82e1fe1b125e108ef92f81b24bcb36&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Close Change&lt;/sys_name&gt;&lt;sys_package display_value="ModTrak" source="x_neyu_modtrak"&gt;40834d4f1b1d12108ef92f81b24bcb7f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="ModTrak"&gt;40834d4f1b1d12108ef92f81b24bcb7f&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_6a82e1fe1b125e108ef92f81b24bcb36&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;ab7289&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-09 17:15:42&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="ModTrak to Change"&gt;52e679501ba15a103f31a9b6624bcbee&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-683170221</payload_hash>
+        <record_name>Close Change</record_name>
+        <reverted_from/>
+        <source>24937c1e1b0292108ef92f81b24bcb4f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-12-09 17:15:42</sys_created_on>
+        <sys_id>a0f2adbe1b125e108ef92f81b24bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193ac6b6ee90000001</sys_recorded_at>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-09 17:15:42</sys_updated_on>
+        <type>Scripted REST Resource</type>
+        <update_guid>64f2adbebb125e10607355707e9baf89</update_guid>
+        <update_guid_history>64f2adbebb125e10607355707e9baf89:-683170221</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-12-09 17:16:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_operation">sys_ws_operation</sys_db_object>
+        <sys_id>12fa7c12f722447f817ff3822259e319</sys_id>
+        <sys_metadata>6a82e1fe1b125e108ef92f81b24bcb36</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Close Change</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_scope_delete display_value="">5d706e2f6a514770a3b89eef580fae40</sys_scope_delete>
+        <sys_update_name>sys_ws_operation_6a82e1fe1b125e108ef92f81b24bcb36</sys_update_name>
+        <sys_update_version display_value="sys_ws_operation_6a82e1fe1b125e108ef92f81b24bcb36">a0f2adbe1b125e108ef92f81b24bcb8a</sys_update_version>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-09 17:16:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

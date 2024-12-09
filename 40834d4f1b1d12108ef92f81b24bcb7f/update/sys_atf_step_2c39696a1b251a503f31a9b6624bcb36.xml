@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-01 16:24:57</sys_created_on>
+        <sys_id>2c39696a1b251a503f31a9b6624bcb36</sys_id>
+        <sys_mod_count>59</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_atf_step_2c39696a1b251a503f31a9b6624bcb36</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:01:07</sys_updated_on>
+        <table/>
+        <test display_value="ModTrak WebServiceUtil Script Include Tests">13d8ed2a1b251a503f31a9b6624bcb96</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=2c39696a1b251a503f31a9b6624bcb36"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>2c39696a1b251a503f31a9b6624bcb36</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-01 16:24:57</sys_created_on>
+        <sys_id>2aeaa1ea1b251a503f31a9b6624bcb32</sys_id>
+        <sys_mod_count>59</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:01:07</sys_updated_on>
+        <value>(function(outputs, steps, params, stepResult, assertEqual) {&#13;
+&#13;
+    describe("WebServiceUtil Script Include Tests", function() {&#13;
+&#13;
+        it('Should return the ModTrak number if everything goes correctly', function() {&#13;
+&#13;
+            var mockResponse = {&#13;
+                getBody: function() {&#13;
+                    return "12345";&#13;
+                },&#13;
+                getStatusCode: function() {&#13;
+                    return 200;&#13;
+                }&#13;
+            };&#13;
+&#13;
+            var script = new x_neyu_modtrak.WebServiceUtil(null, true);&#13;
+&#13;
+            var spy = spyOn(script, "_execute");&#13;
+            spy.and.returnValue(mockResponse);&#13;
+&#13;
+            var response = script.rest(&#13;
+                ModTrakAPI.CONSTANTS.API.CREATE.name,&#13;
+                ModTrakAPI.CONSTANTS.API.CREATE.method, {}, {}&#13;
+            );&#13;
+&#13;
+            expect(spy).toHaveBeenCalled();&#13;
+            expect(response.result).toBe(12345);&#13;
+            expect(response.error).toBe(false);&#13;
+            expect(response.errorMessage).toBe("");&#13;
+        });&#13;
+&#13;
+		it("should return an error response if the response status code is not 200", function() {&#13;
+			&#13;
+			var mockResponse = {&#13;
+				getStatusCode: function() {&#13;
+					return 400;&#13;
+				},&#13;
+				getBody: function() {&#13;
+					return "Generic Error";&#13;
+				}&#13;
+			};&#13;
+&#13;
+			var script = new x_neyu_modtrak.WebServiceUtil(null, true);&#13;
+&#13;
+			var spy = spyOn(script, "_execute");&#13;
+			spy.and.returnValue(mockResponse);&#13;
+&#13;
+			var response = script.rest(&#13;
+                ModTrakAPI.CONSTANTS.API.CREATE.name,&#13;
+                ModTrakAPI.CONSTANTS.API.CREATE.method, {}, {}&#13;
+            );&#13;
+&#13;
+			expect(spy).toHaveBeenCalled();&#13;
+			expect(response.error).toBe(true);&#13;
+			expect(response.errorMessage).toBe("Generic Error");&#13;
+		});&#13;
+&#13;
+		it('should catch any thrown errors and return a standard error response', function() {&#13;
+&#13;
+			var script = new x_neyu_modtrak.WebServiceUtil(null, true);&#13;
+&#13;
+			var spy = spyOn(script, "_execute");&#13;
+			spy.and.callFake(function() {&#13;
+				throw "Unexpected Error";&#13;
+			});&#13;
+&#13;
+			var response = script.rest(&#13;
+                ModTrakAPI.CONSTANTS.API.CREATE.name,&#13;
+                ModTrakAPI.CONSTANTS.API.CREATE.method, {}, {}&#13;
+            );&#13;
+&#13;
+			expect(spy).toHaveBeenCalled();&#13;
+			expect(response.error).toBe(true);&#13;
+			expect(response.errorMessage).toBe("Unexpected Error");&#13;
+			expect(response.result).toBeFalsy();&#13;
+		});&#13;
+&#13;
+        it("Should throw an error if restMessage is not provided", function() {&#13;
+            var script = new x_neyu_modtrak.WebServiceUtil();&#13;
+&#13;
+            var errorResponse = script.rest("", "POST");&#13;
+&#13;
+            expect(errorResponse).toEqual({&#13;
+                error: true,&#13;
+                errorMessage: "restMessage and restMethod are required"&#13;
+            });&#13;
+        });&#13;
+&#13;
+        it("Should throw an error if restMethod is not provided", function() {&#13;
+            var script = new x_neyu_modtrak.WebServiceUtil();&#13;
+&#13;
+            var errorResponse = script.rest("ModTrak");&#13;
+&#13;
+            expect(errorResponse).toEqual({&#13;
+                error: true,&#13;
+                errorMessage: "restMessage and restMethod are required"&#13;
+            });&#13;
+        });&#13;
+    });&#13;
+&#13;
+})(outputs, steps, params, stepResult, assertEqual);&#13;
+// uncomment the next line to execute this script as a jasmine test&#13;
+jasmine.getEnv().execute();</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>2c39696a1b251a503f31a9b6624bcb36</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-01 16:24:57</sys_created_on>
+        <sys_id>eeeaa1ea1b251a503f31a9b6624bcb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-01 16:24:57</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+</record_update>

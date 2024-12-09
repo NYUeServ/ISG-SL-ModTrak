@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-25 17:36:58</sys_created_on>
+        <sys_id>6ef7f1d01ba15a103f31a9b6624bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_neyu_modtrak.import</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_security_acl display_value="ModTrak API">35f775d01ba15a103f31a9b6624bcb0c</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_6ef7f1d01ba15a103f31a9b6624bcb9a</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-25 17:36:58</sys_updated_on>
+        <sys_user_role display_value="x_neyu_modtrak.import" name="x_neyu_modtrak.import">d22879d01ba15a103f31a9b6624bcbe3</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

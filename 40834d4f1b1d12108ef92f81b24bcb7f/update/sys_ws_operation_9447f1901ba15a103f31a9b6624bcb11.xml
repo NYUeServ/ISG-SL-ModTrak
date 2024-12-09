@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>35f775d01ba15a103f31a9b6624bcb0c</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create Change</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // get the change request data
+    var changeRequest = request.body.data;
+    var util = new x_neyu_modtrak.ChangeHelper();
+
+    // check to see if the request is valid
+    var validated = util.validateChangePOST(changeRequest);
+    if (validated.error) {
+        gs.error(JSON.stringify(validated));
+
+        return buildError(validated);
+    } else {
+        // if valid, attempt to create the change
+        var requestResponse = util.createChange(changeRequest);
+
+        if (requestResponse.error) {
+            gs.error(JSON.stringify(requestResponse));
+
+            return buildError(requestResponse);
+        } else {
+            // change created successfully, return the response data
+            response.setBody(requestResponse.data);
+        }
+    }
+
+    function buildError(data) {
+        var responseError = new sn_ws_err.ServiceError();
+        responseError.setStatus(data.status);
+        responseError.setMessage(data.errorMessage);
+        return responseError;
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_neyu_modtrak/import_change</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-25 17:35:09</sys_created_on>
+        <sys_id>9447f1901ba15a103f31a9b6624bcb11</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Create Change</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_ws_operation_9447f1901ba15a103f31a9b6624bcb11</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-05 14:29:51</sys_updated_on>
+        <web_service_definition display_value="ModTrak to Change">52e679501ba15a103f31a9b6624bcbee</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

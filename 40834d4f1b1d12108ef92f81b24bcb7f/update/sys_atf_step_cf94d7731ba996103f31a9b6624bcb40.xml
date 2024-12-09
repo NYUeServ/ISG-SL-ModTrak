@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes>Automated tests for the _createChange method in ChangeHelper</notes>
+        <order>5</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-05 21:19:30</sys_created_on>
+        <sys_id>cf94d7731ba996103f31a9b6624bcb40</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_atf_step_cf94d7731ba996103f31a9b6624bcb40</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-05 20:55:49</sys_updated_on>
+        <table/>
+        <test display_value="ModTrak ChangeHelper Script Include Tests">efcd38ef1b6516108ef92f81b24bcb83</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=cf94d7731ba996103f31a9b6624bcb40"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>cf94d7731ba996103f31a9b6624bcb40</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-05 21:19:30</sys_created_on>
+        <sys_id>50b49b731ba996103f31a9b6624bcb98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-05 21:19:30</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>cf94d7731ba996103f31a9b6624bcb40</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-05 21:19:30</sys_created_on>
+        <sys_id>58b49b731ba996103f31a9b6624bcb98</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-05 20:55:49</sys_updated_on>
+        <value>(function(outputs, steps, params, stepResult, assertEqual) {&#13;
+    // add test script here&#13;
+    describe("ChangeHelper._createChange tests", function() {&#13;
+&#13;
+        var params = {&#13;
+            "description": "test post",&#13;
+            "requested_by": "tp1406",&#13;
+            "short_description": "test",&#13;
+            "start_date": "2024-10-21 00:00:00",&#13;
+            "end_date": "2024-10-30 00:00:00",&#13;
+            "service_offering": "NYU Wi-Fi",&#13;
+            "state": "-5",&#13;
+            "type": "normal",&#13;
+            "modtrak_number": "4321"&#13;
+        };&#13;
+&#13;
+        it('should return a valid sys_id and number when given valid inputs', function() {&#13;
+&#13;
+            var result = (new x_neyu_modtrak.ChangeHelper())._createChange(params);&#13;
+&#13;
+            expect(result.data).toBeDefined();&#13;
+            expect(result.data.sys_id).toBeDefined();&#13;
+            expect(result.data.number).toBeDefined();&#13;
+            var re = /[a-f0-9]{32}/g;&#13;
+            expect(re.test(result.data.sys_id)).toBe(true);&#13;
+            expect(result.data.number.indexOf("CHG") !== -1).toBe(true);&#13;
+        });&#13;
+&#13;
+        it('should create a valid normal change', function() {&#13;
+&#13;
+            var result = (new x_neyu_modtrak.ChangeHelper())._createChange(params);&#13;
+&#13;
+            expect(result.data.sys_id).toBeDefined();&#13;
+            var gr = new GlideRecord("change_request");&#13;
+            expect(gr.get("sys_id", result.data.sys_id)).toBe(true);&#13;
+            expect(gr.isValidRecord()).toBe(true);&#13;
+            expect(gr.getValue("type")).toBe(params["type"]);&#13;
+        });&#13;
+&#13;
+        it('should set the correlation_display and correlation_id on the change', function() {&#13;
+&#13;
+            var result = (new x_neyu_modtrak.ChangeHelper())._createChange(params);&#13;
+&#13;
+            expect(result.data.sys_id).toBeDefined();&#13;
+&#13;
+            var gr = new GlideRecord("change_request");&#13;
+            expect(gr.get("sys_id", result.data.sys_id)).toBe(true);&#13;
+&#13;
+            var key = x_neyu_modtrak.ModTrakAPI.CONSTANTS.CORRELATION_DISPLAY;&#13;
+            expect(gr.getValue("correlation_display")).toBe(key);&#13;
+            expect(gr.getValue("correlation_id")).toBe(params["modtrak_number"]);&#13;
+        });&#13;
+&#13;
+        it('should return an error if change model is not valid', function() {&#13;
+            var newParams = Object.assign({}, params);&#13;
+            newParams.type = "asdf";&#13;
+&#13;
+            var result = (new x_neyu_modtrak.ChangeHelper())._createChange(newParams);&#13;
+&#13;
+            expect(result).toEqual({&#13;
+                error: true,&#13;
+                errorMessage: "Unable to locate change model for type",&#13;
+                status: 400&#13;
+            });&#13;
+        });&#13;
+    });&#13;
+&#13;
+})(outputs, steps, params, stepResult, assertEqual);&#13;
+// uncomment the next line to execute this script as a jasmine test&#13;
+jasmine.getEnv().execute();</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>

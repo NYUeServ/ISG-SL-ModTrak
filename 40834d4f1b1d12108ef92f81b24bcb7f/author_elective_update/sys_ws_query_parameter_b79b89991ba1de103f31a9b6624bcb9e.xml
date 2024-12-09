@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
+    <sys_ws_query_parameter action="DELETE">
+        <example_value>"CHG0030048" or "ab79800c1b29d61058b553de1d4bcb7a"</example_value>
+        <name>number</name>
+        <required>false</required>
+        <short_description>Change Number or SYS_ID to search for</short_description>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-28 16:56:41</sys_created_on>
+        <sys_id>b79b89991ba1de103f31a9b6624bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>number</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_b79b89991ba1de103f31a9b6624bcb9e</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-28 16:56:41</sys_updated_on>
+        <web_service_definition display_value="ModTrak to Change">52e679501ba15a103f31a9b6624bcbee</web_service_definition>
+    </sys_ws_query_parameter>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</application>
+        <file_path/>
+        <instance_id>58b11994db81b010c6e711f84896190f</instance_id>
+        <instance_name>nyudev2</instance_name>
+        <name>sys_ws_query_parameter_b79b89991ba1de103f31a9b6624bcb9e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter"><sys_ws_query_parameter action="INSERT_OR_UPDATE"><example_value>"CHG0030048" or "ab79800c1b29d61058b553de1d4bcb7a"</example_value><name>number</name><required>false</required><short_description>Change Number or SYS_ID to search for</short_description><sys_class_name>sys_ws_query_parameter</sys_class_name><sys_created_by>ab7289</sys_created_by><sys_created_on>2024-10-28 16:56:41</sys_created_on><sys_id>b79b89991ba1de103f31a9b6624bcb9e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>number</sys_name><sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package><sys_policy/><sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope><sys_update_name>sys_ws_query_parameter_b79b89991ba1de103f31a9b6624bcb9e</sys_update_name><sys_updated_by>ab7289</sys_updated_by><sys_updated_on>2024-10-28 16:56:41</sys_updated_on><web_service_definition display_value="ModTrak to Change">52e679501ba15a103f31a9b6624bcbee</web_service_definition></sys_ws_query_parameter></record_update>]]></payload>
+        <payload_hash>1043647219</payload_hash>
+        <record_name>number</record_name>
+        <reverted_from/>
+        <source>c1a3098f1b1d12108ef92f81b24bcb67</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-28 16:56:41</sys_created_on>
+        <sys_id>28db8d991ba1de103f31a9b6624bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192d40eee810000001</sys_recorded_at>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-28 16:56:41</sys_updated_on>
+        <type>Scripted REST Query Parameter</type>
+        <update_guid>e8db8d9977a1de107271795e54ec3a0f</update_guid>
+        <update_guid_history>e8db8d9977a1de107271795e54ec3a0f:1043647219</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-28 16:56:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_query_parameter">sys_ws_query_parameter</sys_db_object>
+        <sys_id>238879c3ae90421e9b6a505b2b36fec1</sys_id>
+        <sys_metadata>b79b89991ba1de103f31a9b6624bcb9e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>number</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_scope_delete display_value="">5d706e2f6a514770a3b89eef580fae40</sys_scope_delete>
+        <sys_update_name>sys_ws_query_parameter_b79b89991ba1de103f31a9b6624bcb9e</sys_update_name>
+        <sys_update_version display_value="sys_ws_query_parameter_b79b89991ba1de103f31a9b6624bcb9e">28db8d991ba1de103f31a9b6624bcb10</sys_update_version>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-28 16:56:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

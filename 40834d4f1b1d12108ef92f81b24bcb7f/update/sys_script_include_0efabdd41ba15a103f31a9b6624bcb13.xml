@@ -84,30 +84,32 @@ ChangeHelper.prototype = {
      * an Update Request to close the Change.
      */
     createCloseRequest: function(request) {
-		// TODO check to see if there isn't already a close request for the spsecified change
+        // TODO check to see if there isn't already a close request for the spsecified change
         const changeGR = new GlideRecordSecure("change_request");
         changeGR.addQuery("correlation_display", ChangeHelper.CORRELATION_KEY);
         changeGR.addQuery("correlation_id", request.modtrak_number);
-		changeGR.addQuery("chg_model", "e55d0bfec343101035ae3f52c1d3ae49"); // change model is standard
+        changeGR.addQuery("chg_model", "e55d0bfec343101035ae3f52c1d3ae49"); // change model is standard
         changeGR.setLimit(1);
         changeGR.query();
 
         if (changeGR.next()) {
-			// check to see if a request hasn't already been created
-			if (this._closeRequestExists(changeGR)) {
-				return {
-					error: true,
-					status: 400,
-					errorMessage: "A Close Request has already been created."
-				};
-			}
+            // check to see if a request hasn't already been created
+            if (this._closeRequestExists(changeGR)) {
+                return {
+                    error: true,
+                    status: 400,
+                    errorMessage: "A Close Request has already been created."
+                };
+            }
 
             // create an Update Request record, which will handle closing the change
+            var shortDesc = "Close Request for ModTrak " + request.modtrak_number.toString();
+
             const updateReq = new GlideRecordSecure(ChangeHelper.CLOSE_REQ_TABLE);
             updateReq.initialize();
             updateReq.setValue("change_request", changeGR.getValue("sys_id"));
-            updateReq.setValue("short_description", "Close Request for ModTrak " + request.modtrak_number);
-			updateReq.setValue("closure_state", request.state);
+            updateReq.setValue("short_description", shortDesc);
+            updateReq.setValue("closure_state", request.state);
 
             const reqId = updateReq.insert();
             if (gs.nil(reqId)) {
@@ -135,13 +137,13 @@ ChangeHelper.prototype = {
         }
     },
 
-	_closeRequestExists: function(changeGR) {
-		const reqGR = new GlideRecord(ChangeHelper.CLOSE_REQ_TABLE);
-		reqGR.addQuery("change_request", changeGR.getUniqueValue());
-		reqGR.query();
+    _closeRequestExists: function(changeGR) {
+        const reqGR = new GlideRecord(ChangeHelper.CLOSE_REQ_TABLE);
+        reqGR.addQuery("change_request", changeGR.getUniqueValue());
+        reqGR.query();
 
-		return reqGR.hasNext();
-	},
+        return reqGR.hasNext();
+    },
 
     /**
      * Creates a new change request given the validated request data
@@ -266,19 +268,19 @@ ChangeHelper.REQ_TEMPLATE_PARAMS = [
 ];
 ChangeHelper.CLOSE_REQ_PARAMS = [
     "modtrak_number",
-	"state"
+    "state"
 ];]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-25 17:50:32</sys_created_on>
         <sys_id>0efabdd41ba15a103f31a9b6624bcb13</sys_id>
-        <sys_mod_count>67</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>ChangeHelper</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_0efabdd41ba15a103f31a9b6624bcb13</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-09 21:03:46</sys_updated_on>
+        <sys_updated_on>2024-12-10 19:41:08</sys_updated_on>
     </sys_script_include>
 </record_update>

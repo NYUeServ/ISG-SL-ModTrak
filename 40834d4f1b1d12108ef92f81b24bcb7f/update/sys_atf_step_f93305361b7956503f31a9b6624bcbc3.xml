@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Send a 'POST' request to '/api/x_neyu_modtrak/import_change'</description>
+        <display_name>Send REST Request - Inbound</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <step_config display_value="Send REST Request - Inbound">e00571a10b3222000b7da95e93673a8f</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:26:19</sys_created_on>
+        <sys_id>f93305361b7956503f31a9b6624bcbc3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Send REST Request - Inbound</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_atf_step_f93305361b7956503f31a9b6624bcbc3</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-05 20:59:11</sys_updated_on>
+        <table/>
+        <test display_value="ModTrak /import_change Authentication Test">3e7209f21b7956503f31a9b6624bcb8e</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=f93305361b7956503f31a9b6624bcbc3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f93305361b7956503f31a9b6624bcbc3</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:26:19</sys_created_on>
+        <sys_id>07530d361b7956503f31a9b6624bcbd5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-05 20:59:12</sys_updated_on>
+        <value>{&#13;
+    "description": "test post",&#13;
+    "requested_by": "tp1406",&#13;
+    "short_description": "test",&#13;
+    "start_date": "2024-10-21 00:00:00",&#13;
+    "end_date": "2024-10-30 00:00:00",&#13;
+    "service_offering": "NYU Wi-Fi",&#13;
+    "state": "-5",&#13;
+    "type": "normal",&#13;
+    "modtrak_number": "4321"&#13;
+}</value>
+        <variable display_value="Body">81e042650b3222000b7da95e93673aa2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f93305361b7956503f31a9b6624bcbc3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:26:19</sys_created_on>
+        <sys_id>43530d361b7956503f31a9b6624bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:26:19</sys_updated_on>
+        <value>post</value>
+        <variable display_value="Method">59877da10b3222000b7da95e93673a56</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f93305361b7956503f31a9b6624bcbc3</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:26:19</sys_created_on>
+        <sys_id>8b530d361b7956503f31a9b6624bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:26:19</sys_updated_on>
+        <value/>
+        <variable display_value="Query Parameters">58408e250b3222000b7da95e93673a5c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f93305361b7956503f31a9b6624bcbc3</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:26:19</sys_created_on>
+        <sys_id>8f530d361b7956503f31a9b6624bcbd4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:26:19</sys_updated_on>
+        <value>{"Accept":"application/json","Content-Type":"application/json"}</value>
+        <variable display_value="Headers">cec002650b3222000b7da95e93673aae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f93305361b7956503f31a9b6624bcbc3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:26:19</sys_created_on>
+        <sys_id>c7530d361b7956503f31a9b6624bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:26:19</sys_updated_on>
+        <value>/api/x_neyu_modtrak/import_change</value>
+        <variable display_value="Path">50bff9250b3222000b7da95e93673a9b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>f93305361b7956503f31a9b6624bcbc3</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:26:19</sys_created_on>
+        <sys_id>cb530d361b7956503f31a9b6624bcbd4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:26:19</sys_updated_on>
+        <value>5cf97c761b3956503f31a9b6624bcbd7</value>
+        <variable display_value="Basic authentication">020a6af09fd32200ef4afa7dc67fcfec</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_e00571a10b3222000b7da95e93673a8f^id=f93305361b7956503f31a9b6624bcbc3"/>
+</record_update>

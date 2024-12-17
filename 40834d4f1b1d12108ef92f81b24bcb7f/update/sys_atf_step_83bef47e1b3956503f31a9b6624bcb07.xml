@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from display_value="Assert Response Payload">edc423081bb11a108ef92f81b24bcbf9</copied_from>
+        <description>Assert a response payload contains 'sys_id'</description>
+        <display_name>Assert Response Payload</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>7</order>
+        <step_config display_value="Assert Response Payload">d53e40d59f132200ef4afa7dc67fcfc7</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:06:06</sys_created_on>
+        <sys_id>83bef47e1b3956503f31a9b6624bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assert Response Payload</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_atf_step_83bef47e1b3956503f31a9b6624bcb07</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:06:06</sys_updated_on>
+        <table/>
+        <test display_value="ModTrak /import_change POST STD CHG Test">b6beb47e1b3956503f31a9b6624bcbc0</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=83bef47e1b3956503f31a9b6624bcb07"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>83bef47e1b3956503f31a9b6624bcb07</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:06:06</sys_created_on>
+        <sys_id>83bef47e1b3956503f31a9b6624bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:06:06</sys_updated_on>
+        <value>sys_id</value>
+        <variable display_value="Response body">f0eec4d59f132200ef4afa7dc67fcf6d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>83bef47e1b3956503f31a9b6624bcb07</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:06:06</sys_created_on>
+        <sys_id>cfbef47e1b3956503f31a9b6624bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:06:06</sys_updated_on>
+        <value>contains</value>
+        <variable display_value="Operation">ccae44d59f132200ef4afa7dc67fcf1e</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_d53e40d59f132200ef4afa7dc67fcfc7^id=83bef47e1b3956503f31a9b6624bcb07"/>
+</record_update>

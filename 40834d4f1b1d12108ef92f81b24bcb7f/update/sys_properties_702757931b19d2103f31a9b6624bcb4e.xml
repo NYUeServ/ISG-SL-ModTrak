@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>true|false</choices>
+        <description>Toggles debug logging for the ModTrak Integration</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>true</is_private>
+        <name>x_neyu_modtrak.debug</name>
+        <read_roles>web_service_admin</read_roles>
+        <suffix>debug</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-22 21:58:21</sys_created_on>
+        <sys_id>702757931b19d2103f31a9b6624bcb4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_neyu_modtrak.debug</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_properties_702757931b19d2103f31a9b6624bcb4e</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-10-22 21:58:21</sys_updated_on>
+        <type>boolean</type>
+        <value>false</value>
+        <write_roles>web_service_admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=702757931b19d2103f31a9b6624bcb4e"/>
+</record_update>

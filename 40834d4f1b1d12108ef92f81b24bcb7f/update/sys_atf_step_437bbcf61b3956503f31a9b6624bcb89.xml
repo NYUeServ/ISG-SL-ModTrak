@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Insert a record into 'sys_user_grmember' with the following values:
+Group = {{Step 2: Record Query.First record}}
+and User = {{Step 1: Record Query.First record}}
+Confirm the record was successfully inserted
+
+Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</description>
+        <display_name>Record Insert</display_name>
+        <inputs/>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes>Added api.tester to group for required permissions</notes>
+        <order>3</order>
+        <step_config display_value="Record Insert">14872288df60220062fe6c7a4df26319</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 17:52:31</sys_created_on>
+        <sys_id>437bbcf61b3956503f31a9b6624bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record Insert</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_atf_step_437bbcf61b3956503f31a9b6624bcb89</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <table>sys_user_grmember</table>
+        <test display_value="ModTrak /import_change POST Normal CHG Test">60916fc01bb11a108ef92f81b24bcb4f</test>
+        <timeout/>
+        <warning_message>Warning: Using a system table may cause unexpected behavior for other tests running in parallel&#13;
+See the documentation for Test Design Considerations</warning_message>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=437bbcf61b3956503f31a9b6624bcb89"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>437bbcf61b3956503f31a9b6624bcb89</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 17:52:31</sys_created_on>
+        <sys_id>08ab743a1b3956503f31a9b6624bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <value>group={{step['7beab0f61b3956503f31a9b6624bcb8a'].first_record}}^user={{step['4eaab8b61b3956503f31a9b6624bcbe1'].first_record}}^EQ</value>
+        <variable display_value="Field values">dd54cf535320220002c6435723dc34fd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>437bbcf61b3956503f31a9b6624bcb89</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 17:52:31</sys_created_on>
+        <sys_id>44ab743a1b3956503f31a9b6624bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <value>sys_user_grmember</value>
+        <variable display_value="Table">90144b535320220002c6435723dc3488</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>437bbcf61b3956503f31a9b6624bcb89</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 17:52:31</sys_created_on>
+        <sys_id>80ab743a1b3956503f31a9b6624bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Enforce security">e6e3c7535320220002c6435723dc3496</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>437bbcf61b3956503f31a9b6624bcb89</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 17:52:31</sys_created_on>
+        <sys_id>8cab743a1b3956503f31a9b6624bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <value>record_successfully_inserted</value>
+        <variable display_value="Assert type">9024a37f671003007ba405225685efe5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=437bbcf61b3956503f31a9b6624bcb89"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>enforce_security</field>
+        <id>437bbcf61b3956503f31a9b6624bcb89</id>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 17:52:31</sys_created_on>
+        <sys_id>48ab743a1b3956503f31a9b6624bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>field_values</field>
+        <id>437bbcf61b3956503f31a9b6624bcb89</id>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 17:52:31</sys_created_on>
+        <sys_id>0cab743a1b3956503f31a9b6624bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 17:52:31</sys_updated_on>
+        <table>var__m_atf_input_variable_14872288df60220062fe6c7a4df26319</table>
+        <value>group={{step['7beab0f61b3956503f31a9b6624bcb8a'].first_record}}^user={{step['4eaab8b61b3956503f31a9b6624bcbe1'].first_record}}^EQ</value>
+    </sys_element_mapping>
+</record_update>

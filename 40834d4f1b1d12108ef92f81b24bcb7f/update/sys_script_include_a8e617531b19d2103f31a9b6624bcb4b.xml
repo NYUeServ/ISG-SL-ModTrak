@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_neyu_modtrak.ModTrakAPI</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ModTrakAPI</name>
+        <script><![CDATA[var ModTrakAPI = Class.create();
+ModTrakAPI.prototype = {
+    initialize: function(/* for testing purposes */ wsUtil) {
+        this.debug = (gs.getProperty("x_neyu_modtrak.debug", "false") == "true");
+        this.mid = gs.getProperty("x_neyu_modtrak.mid_server");
+        this.wsUtil = gs.nil(wsUtil) ? new WebServiceUtil(this.mid, this.debug) : wsUtil;
+    },
+
+    /**
+     * Required fields:
+     * applicationName
+    	subject
+    	priority
+    	refNumber
+    	requestor
+    	requestDate
+    	requestedDueDate
+    	status // Has to be either REQUEST or COMPLETED
+
+    	// If status == COMPLETED the following fields are also mandatory:
+    	deptApprover
+    	deptApprDate
+    	infoTechApprover
+    	infoTechApprDate
+    	completeDate
+    	workStartedDate
+     */
+    create: function(
+        requestor,
+        applicationName,
+        applicationFunction = null,
+        subject,
+        status,
+        description = null,
+        reasonForChange = null,
+        changeType = null,
+        priority,
+        refNumber,
+        requestDate,
+        requestedDueDate,
+        department = null,
+        workflowFlag = "Y",
+        deptApprover = null,
+        deptApprDate = null,
+        workStartedDate = null,
+        completeDate = null,
+        infoTechApprover = null,
+        infoTechApprDate = null
+    ) {
+        var attrs = new Object();
+        attrs['requestor'] = requestor;
+        attrs['applicationName'] = applicationName;
+        attrs['applicationFunction'] = applicationFunction;
+        attrs['subject'] = subject;
+        attrs['status'] = status;
+        attrs['description'] = description;
+        attrs['reasonForChange'] = reasonForChange;
+        attrs['changeType'] = changeType;
+        attrs['priority'] = priority;
+        attrs['refNumber'] = refNumber;
+        attrs['requestDate'] = requestDate;
+        attrs['requestedDueDate'] = requestedDueDate;
+        attrs['department'] = department;
+        attrs['workflowFlag'] = workflowFlag;
+        attrs['deptApprover'] = deptApprover;
+        attrs['deptApprDate'] = deptApprDate;
+        attrs['workStartedDate'] = workStartedDate;
+        attrs['completeDate'] = completeDate;
+        attrs['infoTechApprover'] = infoTechApprover;
+        attrs['infoTechApprDate'] = infoTechApprDate;
+
+        const response = this.wsUtil.rest(
+            ModTrakAPI.CONSTANTS.API.CREATE.name,
+            ModTrakAPI.CONSTANTS.API.CREATE.method,
+            attrs
+        );
+
+        if (response.error) {
+            gs.error("ModTrak POST returned an error.\nError: {0}", response.errorMessage);
+        }
+
+        return response;
+    },
+
+    status: function(changeNumber, approveHistory = "N") {
+        if (this.debug) {
+            gs.info("ModTrak Status Check\nchangeNumber: " + changeNumber +
+                "\napproveHistory: " + approveHistory);
+        }
+
+        var attrs = new Object();
+        attrs["changeNumber"] = changeNumber;
+        attrs["approveHistory"] = approveHistory;
+
+        const response = this.wsUtil.rest(
+            ModTrakAPI.CONSTANTS.API.SEARCH.name,
+            ModTrakAPI.CONSTANTS.API.SEARCH.method,
+            attrs
+        );
+
+        if (response.error) {
+            gs.error("ModTrak Search returned an error.\nError: {0}", response.errorMessage);
+        }
+
+        return response;
+    },
+
+	close: function(number, modtrak, status, comments) {
+		if (this.debug) {
+			gs.info("ModTrak Close\nNumber: {0},\nModTrak: {1}\nStatus: {2}\nComments: {3}",
+			number, modtrak, status, comments);
+		}
+
+		var attrs = new Object();
+		attrs["slChangeId"] = number;
+		attrs["modtrakId"] = modtrak;
+		attrs["status"] = status;
+		attrs["approverComments"] = comments;
+
+		const response = this.wsUtil.rest(
+            ModTrakAPI.CONSTANTS.API.UPDATE_APPROVAL.name,
+            ModTrakAPI.CONSTANTS.API.UPDATE_APPROVAL.method,
+            attrs
+        );
+
+        if (response.error) {
+            gs.error("ModTrak Close returned an error.\nError: {0}", response.errorMessage);
+        }
+
+        return response;
+	},
+
+    type: 'ModTrakAPI'
+};
+
+ModTrakAPI.CONSTANTS = {
+
+    API: {
+        CREATE: {
+            name: "ModTrak",
+            method: "Create ModTrak"
+        },
+        SEARCH: {
+            name: "ModTrak",
+            method: "Search ModTrak"
+        },
+		UPDATE_APPROVAL: {
+			name: "ModTrak",
+			method: "Approval Update"
+		}
+    },
+	CORRELATION_DISPLAY: "ModTrak"
+
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-10-22 21:57:22</sys_created_on>
+        <sys_id>a8e617531b19d2103f31a9b6624bcb4b</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>ModTrakAPI</sys_name>
+        <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
+        <sys_update_name>sys_script_include_a8e617531b19d2103f31a9b6624bcb4b</sys_update_name>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-12-09 22:14:55</sys_updated_on>
+    </sys_script_include>
+</record_update>

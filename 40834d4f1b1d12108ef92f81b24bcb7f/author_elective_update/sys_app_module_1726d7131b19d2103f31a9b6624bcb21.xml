@@ -68,7 +68,7 @@
         <update_guid_history>95765753da19d210193fefb48b06e8bc:-1338300118</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Import Set Web Services">c5462ed81ba55a103f31a9b6624bcb11</sys_audit_delete>
+        <sys_audit_delete display_value="">c5462ed81ba55a103f31a9b6624bcb11</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-25 20:57:55</sys_created_on>

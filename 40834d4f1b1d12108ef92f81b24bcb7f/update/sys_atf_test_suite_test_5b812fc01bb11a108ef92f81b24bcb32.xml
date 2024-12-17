@@ -14,7 +14,7 @@
         <sys_update_name>sys_atf_test_suite_test_5b812fc01bb11a108ef92f81b24bcb32</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
         <sys_updated_on>2024-11-06 16:54:56</sys_updated_on>
-        <test display_value="ModTrak API POST Test">60916fc01bb11a108ef92f81b24bcb4f</test>
+        <test display_value="ModTrak /import_change POST Normal CHG Test">60916fc01bb11a108ef92f81b24bcb4f</test>
         <test_suite display_value="ModTrak Inbound API Tests">5a05988a1b6116503f31a9b6624bcb6f</test_suite>
     </sys_atf_test_suite_test>
 </record_update>

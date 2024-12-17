@@ -30,7 +30,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>51182e721b1ada103f31a9b6624bcbe4</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Close ModTrak</sys_name>
         <sys_overrides/>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_51182e721b1ada103f31a9b6624bcbe4</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:10:00</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:42</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -52,10 +52,10 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:19:27</sys_created_on>
         <sys_id>0278aeb21b1ada103f31a9b6624bcb14</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-09 22:19:27</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2024-12-17 17:29:36</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">7978aeb21b1ada103f31a9b6624bcb04</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -165,10 +165,10 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:21:50</sys_created_on>
         <sys_id>70092ef21b1ada103f31a9b6624bcb5f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:09:02</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:36</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=70092ef21b1ada103f31a9b6624bcb5f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -193,9 +193,9 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:21:51</sys_created_on>
         <sys_id>c5092ef21b1ada103f31a9b6624bcb80</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:09:02</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:36</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
     const api = new x_neyu_modtrak.ModTrakAPI();&#13;
@@ -207,8 +207,8 @@
         inputs.comments&#13;
     );&#13;
 &#13;
-    outputs.error = response.error;&#13;
-    outputs.errorMessage = response.errorMessage;&#13;
+    outputs.error1 = response.error;&#13;
+    outputs.errormessage = response.errorMessage;&#13;
     if (response.status) {&#13;
         outputs.status = response.status;&#13;
     } else {&#13;
@@ -1613,14 +1613,14 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:19:27</sys_created_on>
         <sys_id>b178aeb21b1ada103f31a9b6624bcb0a</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:09:58</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:40</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1949,17 +1949,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Close ModTrak">51182e721b1ada103f31a9b6624bcbe4</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"cc7c6a3a1b1ada103f31a9b6624bcb07","name":"plan","plan_signature":null}}</plan>
-        <snapshot>38cf468f1b9a1e103f31a9b6624bcb7b</snapshot>
+        <snapshot>7bd2f2d11baa56103f31a9b6624bcb97</snapshot>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:36:47</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cc7c6a3a1b1ada103f31a9b6624bcb07</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:10:01</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:43</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2011,10 +2011,10 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:36:47</sys_created_on>
         <sys_id>776c2a3a1b1ada103f31a9b6624bcbc9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-09 22:36:47</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2024-12-17 17:29:42</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
         <variable display_value="Action Status">7f6c2a3a1b1ada103f31a9b6624bcbb8</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2124,10 +2124,10 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:36:46</sys_created_on>
         <sys_id>276c2a3a1b1ada103f31a9b6624bcb85</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:09:59</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:42</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=276c2a3a1b1ada103f31a9b6624bcb85"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2138,9 +2138,9 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:36:46</sys_created_on>
         <sys_id>b76c2a3a1b1ada103f31a9b6624bcbaf</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:09:59</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:42</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
     const api = new x_neyu_modtrak.ModTrakAPI();&#13;
@@ -2152,8 +2152,8 @@
         inputs.comments&#13;
     );&#13;
 &#13;
-    outputs.error = response.error;&#13;
-    outputs.errorMessage = response.errorMessage;&#13;
+    outputs.error1 = response.error;&#13;
+    outputs.errormessage = response.errorMessage;&#13;
     if (response.status) {&#13;
         outputs.status = response.status;&#13;
     } else {&#13;
@@ -3659,14 +3659,14 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 22:36:47</sys_created_on>
         <sys_id>bb6c2a3a1b1ada103f31a9b6624bcbc0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name/>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-10 15:10:00</sys_updated_on>
+        <sys_updated_on>2024-12-17 17:29:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

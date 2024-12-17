@@ -4,7 +4,7 @@
         <description/>
         <input_filter/>
         <name>ModTrak API Tests</name>
-        <parent display_value="ModTrak Test Suite">61241c021b6116503f31a9b6624bcb7b</parent>
+        <parent display_value="NYU ModTrak Test Suite">61241c021b6116503f31a9b6624bcb7b</parent>
         <sn_atf_tg_generated>false</sn_atf_tg_generated>
         <sys_class_name>sys_atf_test_suite</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>

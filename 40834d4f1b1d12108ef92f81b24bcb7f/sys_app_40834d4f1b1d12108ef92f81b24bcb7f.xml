@@ -2,7 +2,7 @@
     <sys_app action="INSERT_OR_UPDATE">
         <active>true</active>
         <can_edit_in_studio>true</can_edit_in_studio>
-        <enforce_license>none</enforce_license>
+        <enforce_license>log</enforce_license>
         <guided_setup_guid/>
         <hide_on_ui>false</hide_on_ui>
         <ide_created>DS</ide_created>
@@ -24,7 +24,7 @@
         <scoped_administration>false</scoped_administration>
         <short_description>Integration between ServiceNow and Modtrak</short_description>
         <source>x_neyu_modtrak</source>
-        <store_correlation_id/>
+        <store_correlation_id>REPOAPP0001938703</store_correlation_id>
         <store_url/>
         <subscription_entitlement/>
         <sys_class_name>sys_app</sys_class_name>
@@ -32,9 +32,9 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-21 16:34:00</sys_created_on>
         <sys_id>40834d4f1b1d12108ef92f81b24bcb7f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-10-21 16:34:00</sys_updated_on>
+        <sys_updated_on>2024-12-17 18:15:34</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>

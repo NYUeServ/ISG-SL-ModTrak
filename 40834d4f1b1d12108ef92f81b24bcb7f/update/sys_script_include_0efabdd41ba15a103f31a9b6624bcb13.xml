@@ -172,6 +172,11 @@ ChangeHelper.prototype = {
         // standard changes default risk & impact to low
         stdChangeProcess.setValue("risk", 4);
         stdChangeProcess.setValue("impact", 3);
+        // set a default value for Risk and Impact Analysis if none is provided
+        if (gs.nil(params.risk_impact_analysis)) {
+            stdChangeProcess.setValue("risk_impact_analysis",
+                "Default text for Risk and impact analysis added by ModTrak");
+        }
         stdChangeProcess.insert();
 
         const result = {
@@ -193,15 +198,15 @@ ChangeHelper.prototype = {
             )
         );
 
-		if (params.service_offering) {
-			var svcGR = new GlideRecordSecure("service_offering");
-			// set the Service
-			if (svcGR.get("sys_id", params.service_offering)) {
-				changeGR.setValue("business_service", svcGR.getValue("parent"));
-			}
-			// set the CI
-			changeGR.setValue("cmdb_ci", params.service_offering);
-		}
+        if (params.service_offering) {
+            var svcGR = new GlideRecordSecure("service_offering");
+            // set the Service
+            if (svcGR.get("sys_id", params.service_offering)) {
+                changeGR.setValue("business_service", svcGR.getValue("parent"));
+            }
+            // set the CI
+            changeGR.setValue("cmdb_ci", params.service_offering);
+        }
 
         changeGR.setValue("correlation_display", ChangeHelper.CORRELATION_KEY);
         // set change model
@@ -283,13 +288,13 @@ ChangeHelper.CLOSE_REQ_PARAMS = [
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-25 17:50:32</sys_created_on>
         <sys_id>0efabdd41ba15a103f31a9b6624bcb13</sys_id>
-        <sys_mod_count>75</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>ChangeHelper</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_0efabdd41ba15a103f31a9b6624bcb13</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-18 19:44:48</sys_updated_on>
+        <sys_updated_on>2024-12-19 19:22:23</sys_updated_on>
     </sys_script_include>
 </record_update>

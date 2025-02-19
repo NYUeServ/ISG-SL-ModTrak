@@ -13,14 +13,14 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-05 14:26:35</sys_created_on>
         <sys_id>1d1635fb1be196108ef92f81b24bcb02</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_atf_step_1d1635fb1be196108ef92f81b24bcb02</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-05 21:18:45</sys_updated_on>
+        <sys_updated_on>2025-02-19 16:33:21</sys_updated_on>
         <table/>
         <test display_value="ModTrak ChangeHelper Script Include Tests">efcd38ef1b6516108ef92f81b24bcb83</test>
         <timeout/>
@@ -35,9 +35,9 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-05 14:26:35</sys_created_on>
         <sys_id>f326fd3f1be196108ef92f81b24bcbf7</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-05 21:18:45</sys_updated_on>
+        <sys_updated_on>2025-02-19 16:33:22</sys_updated_on>
         <value>(function(outputs, steps, params, stepResult, assertEqual) {&#13;
     // add test script here&#13;
     describe("ChangeHelper._createStdChange tests", function() {&#13;
@@ -45,7 +45,7 @@
         it('should create a new standard change and return the number and sys_id', function() {&#13;
 &#13;
             var params = {&#13;
-                "template_id": "404e063a1b895a503f31a9b6624bcb89",&#13;
+                "template_id": "161752eac3d31a90d0e1b2fc05013106",&#13;
                 "requested_by": "ab7289",&#13;
                 "modtrak_number": "12345"&#13;
             };&#13;
@@ -61,7 +61,7 @@
 &#13;
         it('should remove the template_id from params then call StandardChangeProcess', function() {&#13;
             var params = {&#13;
-                "template_id": "404e063a1b895a503f31a9b6624bcb89",&#13;
+                "template_id": "161752eac3d31a90d0e1b2fc05013106",&#13;
                 "requested_by": "ab7289",&#13;
                 "modtrak_number": "12345"&#13;
             };&#13;
@@ -73,7 +73,7 @@
             (new x_neyu_modtrak.ChangeHelper())._createStdChange(params);&#13;
 &#13;
             expect(changeSpy).toHaveBeenCalledWith(&#13;
-                "404e063a1b895a503f31a9b6624bcb89", {&#13;
+                "161752eac3d31a90d0e1b2fc05013106", {&#13;
                     "requested_by": "ab7289",&#13;
                     "modtrak_number": "12345"&#13;
                 });&#13;
@@ -81,7 +81,7 @@
 &#13;
         it("should create a valid standard change", function() {&#13;
             var params = {&#13;
-                "template_id": "404e063a1b895a503f31a9b6624bcb89",&#13;
+                "template_id": "161752eac3d31a90d0e1b2fc05013106",&#13;
                 "requested_by": "ab7289",&#13;
                 "modtrak_number": "12345"&#13;
             };&#13;
@@ -97,7 +97,7 @@
 &#13;
         it("should set the correlation display and id on the change request", function() {&#13;
             var params = {&#13;
-                "template_id": "404e063a1b895a503f31a9b6624bcb89",&#13;
+                "template_id": "161752eac3d31a90d0e1b2fc05013106",&#13;
                 "requested_by": "ab7289",&#13;
                 "modtrak_number": "12345"&#13;
             };&#13;

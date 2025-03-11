@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
     <sys_atf_step action="INSERT_OR_UPDATE">
         <active>true</active>
+        <callable_outputs/>
         <copied_from/>
         <description>Run Server Side Validation Script</description>
         <display_name>Run Server Side Script</display_name>
@@ -13,14 +14,14 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-05 14:26:35</sys_created_on>
         <sys_id>1d1635fb1be196108ef92f81b24bcb02</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_atf_step_1d1635fb1be196108ef92f81b24bcb02</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2025-02-19 16:33:21</sys_updated_on>
+        <sys_updated_on>2025-03-11 16:27:03</sys_updated_on>
         <table/>
         <test display_value="ModTrak ChangeHelper Script Include Tests">efcd38ef1b6516108ef92f81b24bcb83</test>
         <timeout/>
@@ -35,9 +36,9 @@
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-05 14:26:35</sys_created_on>
         <sys_id>f326fd3f1be196108ef92f81b24bcbf7</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2025-02-19 16:33:22</sys_updated_on>
+        <sys_updated_on>2025-03-11 16:27:03</sys_updated_on>
         <value>(function(outputs, steps, params, stepResult, assertEqual) {&#13;
     // add test script here&#13;
     describe("ChangeHelper._createStdChange tests", function() {&#13;
@@ -93,6 +94,7 @@
             expect(gr.get("sys_id", result.data.sys_id)).toBe(true);&#13;
             expect(gr.isValidRecord()).toBe(true);&#13;
             expect(gr.getValue("type")).toBe("standard");&#13;
+			expect(gr.getValue("u_change_significance")).toBe("Standard");&#13;
         });&#13;
 &#13;
         it("should set the correlation display and id on the change request", function() {&#13;

@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description/>
+        <mobile_callable>false</mobile_callable>
         <name>FlowUtil</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var FlowUtil = Class.create();
 FlowUtil.prototype = {
     initialize: function(requestGR, _gs) {
@@ -48,7 +50,7 @@ FlowUtil.prototype = {
             flowId: flowId,
             flowQuery: flowContextGR.getEncodedQuery()
         };
-		gs.info(JSON.stringify(result));
+		// gs.info(JSON.stringify(result));
 		return result;
     },
 
@@ -58,13 +60,13 @@ FlowUtil.prototype = {
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-12-09 18:39:55</sys_created_on>
         <sys_id>87f4bd3a1bd2da103f31a9b6624bcbbd</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>FlowUtil</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_87f4bd3a1bd2da103f31a9b6624bcbbd</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-09 18:43:06</sys_updated_on>
+        <sys_updated_on>2025-03-11 14:59:41</sys_updated_on>
     </sys_script_include>
 </record_update>

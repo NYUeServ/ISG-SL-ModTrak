@@ -101,6 +101,8 @@ WebServiceUtil.prototype = {
             responseBody = response.getBody();
             status = response.getStatusCode();
             jObj = this.json.decode(responseBody);
+			
+
         } catch (ex) {
             var err = "There was an internal error when attempting to contact ";
             err += "The ModTrak REST Service: " + restMessage + ":" + restMethod;
@@ -130,6 +132,12 @@ WebServiceUtil.prototype = {
                 "\nResponseBody: " + responseBody);
         }
 
+		// Get error when Status is '0'
+		if (status == '0'){
+			// gs.info("Status: " + status + "\n getErrorCode: " + response.getErrorCode() + "\n getErrorMessage: " + response.getErrorMessage());
+			responseBody = response.getErrorMessage();
+		}
+
         return {
             error: (status != "200"),
             errorMessage: (status == "200" ? "" : responseBody),
@@ -151,13 +159,13 @@ WebServiceUtil.prototype = {
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-22 23:05:29</sys_created_on>
         <sys_id>9585271b1b59d2103f31a9b6624bcbe3</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>WebServiceUtil</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_9585271b1b59d2103f31a9b6624bcbe3</sys_update_name>
-        <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-14 16:47:30</sys_updated_on>
+        <sys_updated_by>mdq204</sys_updated_by>
+        <sys_updated_on>2025-09-26 17:02:08</sys_updated_on>
     </sys_script_include>
 </record_update>

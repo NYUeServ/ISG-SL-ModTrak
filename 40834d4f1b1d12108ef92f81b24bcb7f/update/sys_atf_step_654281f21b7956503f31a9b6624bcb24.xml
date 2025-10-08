@@ -31,20 +31,6 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
         <document_key>654281f21b7956503f31a9b6624bcb24</document_key>
-        <order>120</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ab7289</sys_created_by>
-        <sys_created_on>2024-11-14 18:21:53</sys_created_on>
-        <sys_id>1e52c1f21b7956503f31a9b6624bcb35</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-14 18:21:53</sys_updated_on>
-        <value>template is not valid</value>
-        <variable display_value="Value">7b139c199f132200ef4afa7dc67fcfb3</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_atf_step</document>
-        <document_key>654281f21b7956503f31a9b6624bcb24</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
@@ -55,6 +41,20 @@
         <sys_updated_on>2024-11-14 18:21:53</sys_updated_on>
         <value>/error/message</value>
         <variable display_value="Element path">5a9258199f132200ef4afa7dc67fcfb4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>654281f21b7956503f31a9b6624bcb24</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:21:53</sys_created_on>
+        <sys_id>1e52c1f21b7956503f31a9b6624bcb35</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:21:53</sys_updated_on>
+        <value>template is not valid</value>
+        <variable display_value="Value">7b139c199f132200ef4afa7dc67fcfb3</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>

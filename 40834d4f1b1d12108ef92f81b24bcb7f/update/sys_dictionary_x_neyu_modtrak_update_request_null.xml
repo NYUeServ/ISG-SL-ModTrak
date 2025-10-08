@@ -57,10 +57,10 @@
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_dictionary_x_neyu_modtrak_update_request_null</sys_update_name>
-        <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-09 18:48:52</sys_updated_on>
+        <sys_updated_by>jh9758</sys_updated_by>
+        <sys_updated_on>2025-08-22 15:54:59</sys_updated_on>
         <table_reference>false</table_reference>
-        <text_index>false</text_index>
+        <text_index>true</text_index>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>

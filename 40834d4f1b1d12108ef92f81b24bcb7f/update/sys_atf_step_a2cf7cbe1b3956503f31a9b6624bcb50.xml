@@ -31,20 +31,6 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
         <document_key>a2cf7cbe1b3956503f31a9b6624bcb50</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ab7289</sys_created_by>
-        <sys_created_on>2024-11-14 18:11:06</sys_created_on>
-        <sys_id>9cef3cbe1b3956503f31a9b6624bcbb3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-14 18:11:06</sys_updated_on>
-        <value>/error/message</value>
-        <variable display_value="Element path">5a9258199f132200ef4afa7dc67fcfb4</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_atf_step</document>
-        <document_key>a2cf7cbe1b3956503f31a9b6624bcb50</document_key>
         <order>120</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
@@ -69,6 +55,20 @@
         <sys_updated_on>2024-11-14 18:11:06</sys_updated_on>
         <value>equals</value>
         <variable display_value="Operation">2db298199f132200ef4afa7dc67fcfbc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>a2cf7cbe1b3956503f31a9b6624bcb50</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:11:06</sys_created_on>
+        <sys_id>9cef3cbe1b3956503f31a9b6624bcbb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:11:06</sys_updated_on>
+        <value>/error/message</value>
+        <variable display_value="Element path">5a9258199f132200ef4afa7dc67fcfb4</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_afc114199f132200ef4afa7dc67fcf64^id=a2cf7cbe1b3956503f31a9b6624bcb50"/>
 </record_update>

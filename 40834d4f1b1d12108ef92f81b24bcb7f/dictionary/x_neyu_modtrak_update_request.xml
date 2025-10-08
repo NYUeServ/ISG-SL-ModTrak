@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" db_object_id="f854917a1bde1e108ef92f81b24bcb52" extends="task" label="Update Request" max_length="40" name="x_neyu_modtrak_update_request" type="collection">
+    <element audit="true" db_object_id="f854917a1bde1e108ef92f81b24bcb52" extends="task" label="Update Request" max_length="40" name="x_neyu_modtrak_update_request" text_index="true" type="collection">
         <element label="Change Request" max_length="32" name="change_request" reference="change_request" type="reference"/>
         <element choice="1" label="Closure State" max_length="40" name="closure_state" type="choice">
             <choice>

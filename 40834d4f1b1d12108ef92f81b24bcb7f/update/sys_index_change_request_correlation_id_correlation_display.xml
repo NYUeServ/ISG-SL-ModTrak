@@ -2,7 +2,7 @@
     <sys_index action="INSERT_OR_UPDATE">
         <access_method/>
         <col_name_string>correlation_id,correlation_display</col_name_string>
-        <index_col_name>34f795181b2221107fbdecadee4bcb4b,f0f795181b2221107fbdecadee4bcb4c</index_col_name>
+        <index_col_name element="correlation_id" name="task">34f795181b2221107fbdecadee4bcb4b,f0f795181b2221107fbdecadee4bcb4c</index_col_name>
         <logical_table_name>change_request</logical_table_name>
         <sys_class_name>sys_index</sys_class_name>
         <sys_created_by>system</sys_created_by>

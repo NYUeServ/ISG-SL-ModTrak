@@ -47,16 +47,16 @@ With a failure timeout of 5 Seconds</description>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
         <document_key>1f7f70be1b3956503f31a9b6624bcb14</document_key>
-        <order>400</order>
+        <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-14 18:09:24</sys_created_on>
-        <sys_id>5b7f70be1b3956503f31a9b6624bcb16</sys_id>
+        <sys_id>d37f70be1b3956503f31a9b6624bcb16</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
         <sys_updated_on>2024-11-14 18:09:24</sys_updated_on>
-        <value>user_name=api.tester^EQ</value>
-        <variable display_value="Conditions">915990ab531000109e02ddeeff7b12f8</variable>
+        <value>0</value>
+        <variable display_value="Enforce security">02fb0027531000109e02ddeeff7b120b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
@@ -75,16 +75,16 @@ With a failure timeout of 5 Seconds</description>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
         <document_key>1f7f70be1b3956503f31a9b6624bcb14</document_key>
-        <order>100</order>
+        <order>400</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-14 18:09:24</sys_created_on>
-        <sys_id>d37f70be1b3956503f31a9b6624bcb16</sys_id>
+        <sys_id>5b7f70be1b3956503f31a9b6624bcb16</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
         <sys_updated_on>2024-11-14 18:09:24</sys_updated_on>
-        <value>0</value>
-        <variable display_value="Enforce security">02fb0027531000109e02ddeeff7b120b</variable>
+        <value>user_name=api.tester^EQ</value>
+        <variable display_value="Conditions">915990ab531000109e02ddeeff7b12f8</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_2d82e3c7531400109e02ddeeff7b12a7^id=1f7f70be1b3956503f31a9b6624bcb14"/>
 </record_update>

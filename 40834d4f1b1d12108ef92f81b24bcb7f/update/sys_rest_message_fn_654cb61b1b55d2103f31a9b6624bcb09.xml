@@ -4,9 +4,9 @@
         <basic_auth_password/>
         <basic_auth_profile/>
         <basic_auth_user/>
-        <content>{&#13;
-"changeNumber": "${changeNumber}",&#13;
-"approveHistory": "${approveHistory}"&#13;
+        <content>{
+"changeNumber": "${changeNumber}",
+"approveHistory": "${approveHistory}"
 }</content>
         <function_name>Search ModTrak POST</function_name>
         <http_method>post</http_method>

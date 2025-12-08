@@ -39,20 +39,6 @@ See the documentation for Test Design Considerations</warning_message>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
         <document_key>febeb47e1b3956503f31a9b6624bcbdc</document_key>
-        <order>200</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ab7289</sys_created_by>
-        <sys_created_on>2024-11-14 18:06:06</sys_created_on>
-        <sys_id>36beb47e1b3956503f31a9b6624bcbdf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-14 18:06:06</sys_updated_on>
-        <value>sys_user_grmember</value>
-        <variable display_value="Table">90144b535320220002c6435723dc3488</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_atf_step</document>
-        <document_key>febeb47e1b3956503f31a9b6624bcbdc</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
@@ -67,16 +53,16 @@ See the documentation for Test Design Considerations</warning_message>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
         <document_key>febeb47e1b3956503f31a9b6624bcbdc</document_key>
-        <order>100</order>
+        <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-11-14 18:06:06</sys_created_on>
-        <sys_id>bebeb47e1b3956503f31a9b6624bcbde</sys_id>
+        <sys_id>36beb47e1b3956503f31a9b6624bcbdf</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>ab7289</sys_updated_by>
         <sys_updated_on>2024-11-14 18:06:06</sys_updated_on>
-        <value>record_successfully_inserted</value>
-        <variable display_value="Assert type">9024a37f671003007ba405225685efe5</variable>
+        <value>sys_user_grmember</value>
+        <variable display_value="Table">90144b535320220002c6435723dc3488</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
@@ -91,6 +77,20 @@ See the documentation for Test Design Considerations</warning_message>
         <sys_updated_on>2024-11-14 18:06:06</sys_updated_on>
         <value>group={{step['b6beb47e1b3956503f31a9b6624bcbcb'].first_record}}^user={{step['bebeb47e1b3956503f31a9b6624bcbc4'].first_record}}^EQ</value>
         <variable display_value="Field values">dd54cf535320220002c6435723dc34fd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>febeb47e1b3956503f31a9b6624bcbdc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-14 18:06:06</sys_created_on>
+        <sys_id>bebeb47e1b3956503f31a9b6624bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-14 18:06:06</sys_updated_on>
+        <value>record_successfully_inserted</value>
+        <variable display_value="Assert type">9024a37f671003007ba405225685efe5</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=febeb47e1b3956503f31a9b6624bcbdc"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">

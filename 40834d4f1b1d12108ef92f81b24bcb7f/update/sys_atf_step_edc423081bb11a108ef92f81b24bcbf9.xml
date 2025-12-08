@@ -31,20 +31,6 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_atf_step</document>
         <document_key>edc423081bb11a108ef92f81b24bcbf9</document_key>
-        <order>110</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ab7289</sys_created_by>
-        <sys_created_on>2024-11-06 17:09:04</sys_created_on>
-        <sys_id>b5f463081bb11a108ef92f81b24bcb30</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-11-06 17:09:04</sys_updated_on>
-        <value>sys_id</value>
-        <variable display_value="Response body">f0eec4d59f132200ef4afa7dc67fcf6d</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_atf_step</document>
-        <document_key>edc423081bb11a108ef92f81b24bcbf9</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
@@ -55,6 +41,20 @@
         <sys_updated_on>2024-11-06 17:09:04</sys_updated_on>
         <value>contains</value>
         <variable display_value="Operation">ccae44d59f132200ef4afa7dc67fcf1e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>edc423081bb11a108ef92f81b24bcbf9</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ab7289</sys_created_by>
+        <sys_created_on>2024-11-06 17:09:04</sys_created_on>
+        <sys_id>b5f463081bb11a108ef92f81b24bcb30</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ab7289</sys_updated_by>
+        <sys_updated_on>2024-11-06 17:09:04</sys_updated_on>
+        <value>sys_id</value>
+        <variable display_value="Response body">f0eec4d59f132200ef4afa7dc67fcf6d</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_d53e40d59f132200ef4afa7dc67fcfc7^id=edc423081bb11a108ef92f81b24bcbf9"/>
 </record_update>

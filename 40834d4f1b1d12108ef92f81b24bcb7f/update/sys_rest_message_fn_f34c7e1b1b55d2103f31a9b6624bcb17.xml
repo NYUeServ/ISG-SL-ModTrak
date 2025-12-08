@@ -4,27 +4,27 @@
         <basic_auth_password/>
         <basic_auth_profile/>
         <basic_auth_user/>
-        <content>{&#13;
-    "applicationName": "${applicationName}",&#13;
-    "applicationFunction": "${applicationFunction}",&#13;
-    "subject": "${subject}",&#13;
-    "status": "${status}",&#13;
-    "description": "${description}",&#13;
-    "reasonForChange": "${reasonForChange}",&#13;
-    "changeType": "${changeType}",&#13;
-    "priority": "${priority}",&#13;
-    "refNumber": "${refNumber}",&#13;
-    "requestDate": "${requestDate}",&#13;
-    "requestor": "${requestor}",&#13;
-    "requestedDueDate": "${requestedDueDate}",&#13;
-    "department": "${department}",&#13;
-    "workflowFlag": "${workflowFlag}",&#13;
-    "deptApprover": "${deptApprover}",&#13;
-    "deptApprDate": "${deptApprDate}",&#13;
-    "workStartedDate": "${workStartedDate}",&#13;
-    "completeDate": "${completeDate}",&#13;
-    "infoTechApprover": "${infoTechApprover}",&#13;
-    "infoTechApprDate": "${infoTechApprDate}"&#13;
+        <content>{
+    "applicationName": "${applicationName}",
+    "applicationFunction": "${applicationFunction}",
+    "subject": "${subject}",
+    "status": "${status}",
+    "description": "${description}",
+    "reasonForChange": "${reasonForChange}",
+    "changeType": "${changeType}",
+    "priority": "${priority}",
+    "refNumber": "${refNumber}",
+    "requestDate": "${requestDate}",
+    "requestor": "${requestor}",
+    "requestedDueDate": "${requestedDueDate}",
+    "department": "${department}",
+    "workflowFlag": "${workflowFlag}",
+    "deptApprover": "${deptApprover}",
+    "deptApprDate": "${deptApprDate}",
+    "workStartedDate": "${workStartedDate}",
+    "completeDate": "${completeDate}",
+    "infoTechApprover": "${infoTechApprover}",
+    "infoTechApprDate": "${infoTechApprDate}"
 }</content>
         <function_name>Create ModTrak</function_name>
         <http_method>post</http_method>

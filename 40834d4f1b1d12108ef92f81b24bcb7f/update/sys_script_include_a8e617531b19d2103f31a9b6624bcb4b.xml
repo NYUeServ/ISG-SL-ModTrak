@@ -11,7 +11,7 @@
         <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var ModTrakAPI = Class.create();
 ModTrakAPI.prototype = {
-    initialize: function(/* for testing purposes */ wsUtil) {
+    initialize: function( /* for testing purposes */ wsUtil) {
         this.debug = (gs.getProperty("x_neyu_modtrak.debug", "false") == "true");
         this.mid = gs.getProperty("x_neyu_modtrak.mid_server");
         this.wsUtil = gs.nil(wsUtil) ? new WebServiceUtil(this.mid, this.debug) : wsUtil;
@@ -28,11 +28,14 @@ ModTrakAPI.prototype = {
     	requestedDueDate
     	status // Has to be either REQUEST or COMPLETED
 
-    	// If status == COMPLETED the following fields are also mandatory:
+    	// If status == COMPLETED the following fields are also 
+		// many of these are not actually required, need to
+		// sync up with wilbert
+		mandatory:
     	deptApprover
     	deptApprDate
-    	infoTechApprover
-    	infoTechApprDate
+    	infoTechApprover (not actually required)
+    	infoTechApprDate (not actually required)
     	completeDate
     	workStartedDate
      */
@@ -58,7 +61,7 @@ ModTrakAPI.prototype = {
         infoTechApprover = null,
         infoTechApprDate = null
     ) {
-        var attrs = new Object();
+        let attrs = new Object();
         attrs['requestor'] = requestor;
         attrs['applicationName'] = applicationName;
         attrs['applicationFunction'] = applicationFunction;
@@ -93,13 +96,20 @@ ModTrakAPI.prototype = {
         return response;
     },
 
+    /**
+     * Gets the Status of the associated ModTrak.
+     * 
+     * @param changeNumber {string} - the ModTrak number
+     * @param approveHistory {Y | N} - include approval history or not
+     * @return object response
+     */
     status: function(changeNumber, approveHistory = "N") {
         if (this.debug) {
             gs.info("ModTrak Status Check\nchangeNumber: " + changeNumber +
                 "\napproveHistory: " + approveHistory);
         }
 
-        var attrs = new Object();
+        let attrs = new Object();
         attrs["changeNumber"] = changeNumber;
         attrs["approveHistory"] = approveHistory;
 
@@ -116,19 +126,19 @@ ModTrakAPI.prototype = {
         return response;
     },
 
-	close: function(number, modtrak, status, comments) {
-		if (this.debug) {
-			gs.info("ModTrak Close\nNumber: {0},\nModTrak: {1}\nStatus: {2}\nComments: {3}",
-			number, modtrak, status, comments);
-		}
+    close: function(number, modtrak, status, comments) {
+        if (this.debug) {
+            gs.info("ModTrak Close\nNumber: {0},\nModTrak: {1}\nStatus: {2}\nComments: {3}",
+                number, modtrak, status, comments);
+        }
 
-		var attrs = new Object();
-		attrs["slChangeId"] = number;
-		attrs["modtrakId"] = modtrak;
-		attrs["status"] = status;
-		attrs["approverComments"] = comments;
+        let attrs = new Object();
+        attrs["slChangeId"] = number;
+        attrs["modtrakId"] = modtrak;
+        attrs["status"] = status;
+        attrs["approverComments"] = comments;
 
-		const response = this.wsUtil.rest(
+        const response = this.wsUtil.rest(
             ModTrakAPI.CONSTANTS.API.UPDATE_APPROVAL.name,
             ModTrakAPI.CONSTANTS.API.UPDATE_APPROVAL.method,
             attrs
@@ -139,7 +149,7 @@ ModTrakAPI.prototype = {
         }
 
         return response;
-	},
+    },
 
     type: 'ModTrakAPI'
 };
@@ -155,25 +165,25 @@ ModTrakAPI.CONSTANTS = {
             name: "ModTrak",
             method: "Search ModTrak"
         },
-		UPDATE_APPROVAL: {
-			name: "ModTrak",
-			method: "Approval Update"
-		}
+        UPDATE_APPROVAL: {
+            name: "ModTrak",
+            method: "Approval Update"
+        }
     },
-	CORRELATION_DISPLAY: "ModTrak"
+    CORRELATION_DISPLAY: "ModTrak"
 
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ab7289</sys_created_by>
         <sys_created_on>2024-10-22 21:57:22</sys_created_on>
         <sys_id>a8e617531b19d2103f31a9b6624bcb4b</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>ModTrakAPI</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_script_include_a8e617531b19d2103f31a9b6624bcb4b</sys_update_name>
         <sys_updated_by>ab7289</sys_updated_by>
-        <sys_updated_on>2024-12-09 22:14:55</sys_updated_on>
+        <sys_updated_on>2025-12-17 19:58:54</sys_updated_on>
     </sys_script_include>
 </record_update>

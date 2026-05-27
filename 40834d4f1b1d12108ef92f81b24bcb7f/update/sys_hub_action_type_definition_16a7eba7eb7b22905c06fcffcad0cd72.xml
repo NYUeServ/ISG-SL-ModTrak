@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>16a7eba7eb7b22905c06fcffcad0cd72</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Get System Property Duration</sys_name>
         <sys_overrides/>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_16a7eba7eb7b22905c06fcffcad0cd72</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
-        <sys_updated_on>2025-09-11 20:50:44</sys_updated_on>
+        <sys_updated_on>2025-10-15 22:45:17</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -182,18 +182,6 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=5fa8e76beb7b22905c06fcffcad0cd8e"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>5fa8e76beb7b22905c06fcffcad0cd8e</id>
-        <sys_created_by>mdq204</sys_created_by>
-        <sys_created_on>2025-09-11 20:40:46</sys_created_on>
-        <sys_id>67a8e76beb7b22905c06fcffcad0cd96</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>mdq204</sys_updated_by>
-        <sys_updated_on>2025-09-11 20:40:46</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>in_sysprop</field>
         <id>5fa8e76beb7b22905c06fcffcad0cd8e</id>
         <sys_created_by>mdq204</sys_created_by>
@@ -204,18 +192,6 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_updated_on>2025-09-11 20:40:46</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_5fa8e76beb7b22905c06fcffcad0cd8e</table>
         <value>{{action.in_sysprop}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>5fa8e76beb7b22905c06fcffcad0cd8e</id>
-        <sys_created_by>mdq204</sys_created_by>
-        <sys_created_on>2025-09-11 20:40:46</sys_created_on>
-        <sys_id>e7a8e76beb7b22905c06fcffcad0cd96</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>mdq204</sys_updated_by>
-        <sys_updated_on>2025-09-11 20:40:46</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_5fa8e76beb7b22905c06fcffcad0cd8e^id=5fa8e76beb7b22905c06fcffcad0cd8e"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=5fa8e76beb7b22905c06fcffcad0cd8e"/>
@@ -402,11 +378,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:40:46</sys_created_on>
         <sys_id>2ba8e76beb7b22905c06fcffcad0cd92</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>out_duration</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_5fa8e76beb7b22905c06fcffcad0cd8e_out_duration_en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:40:46</sys_updated_on>
         <url/>
@@ -784,11 +760,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:45:37</sys_created_on>
         <sys_id>e2c967abeb7b22905c06fcffcad0cd14</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>in_sysprop</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_16a7eba7eb7b22905c06fcffcad0cd72_in_sysprop_en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:45:37</sys_updated_on>
         <url/>
@@ -808,11 +784,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:36:57</sys_created_on>
         <sys_id>2bc72f2beb7b22905c06fcffcad0cdba</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_16a7eba7eb7b22905c06fcffcad0cd72___action_status___en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:36:57</sys_updated_on>
         <url/>
@@ -831,11 +807,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:37:23</sys_created_on>
         <sys_id>8ee76fe7eb7b22905c06fcffcad0cd96</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>out_duration</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_16a7eba7eb7b22905c06fcffcad0cd72_out_duration_en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:37:23</sys_updated_on>
         <url/>
@@ -854,11 +830,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:36:57</sys_created_on>
         <sys_id>ebc72f2beb7b22905c06fcffcad0cdbe</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_16a7eba7eb7b22905c06fcffcad0cd72___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:36:57</sys_updated_on>
         <url/>
@@ -1060,18 +1036,6 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=b76a6fabeb7b22905c06fcffcad0cd0a"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>b76a6fabeb7b22905c06fcffcad0cd0a</id>
-        <sys_created_by>mdq204</sys_created_by>
-        <sys_created_on>2025-09-11 20:48:27</sys_created_on>
-        <sys_id>487a6fabeb7b22905c06fcffcad0cd10</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>mdq204</sys_updated_by>
-        <sys_updated_on>2025-09-11 20:48:27</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>in_sysprop</field>
         <id>b76a6fabeb7b22905c06fcffcad0cd0a</id>
         <sys_created_by>mdq204</sys_created_by>
@@ -1082,18 +1046,6 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_updated_on>2025-09-11 20:48:27</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_b76a6fabeb7b22905c06fcffcad0cd0a</table>
         <value>{{action.in_sysprop}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>b76a6fabeb7b22905c06fcffcad0cd0a</id>
-        <sys_created_by>mdq204</sys_created_by>
-        <sys_created_on>2025-09-11 20:48:27</sys_created_on>
-        <sys_id>c87a6fabeb7b22905c06fcffcad0cd10</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>mdq204</sys_updated_by>
-        <sys_updated_on>2025-09-11 20:48:27</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_b76a6fabeb7b22905c06fcffcad0cd0a^id=b76a6fabeb7b22905c06fcffcad0cd0a"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=b76a6fabeb7b22905c06fcffcad0cd0a"/>
@@ -1280,11 +1232,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:48:27</sys_created_on>
         <sys_id>4c7a6fabeb7b22905c06fcffcad0cd0d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>out_duration</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_b76a6fabeb7b22905c06fcffcad0cd0a_out_duration_en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:48:27</sys_updated_on>
         <url/>
@@ -1662,11 +1614,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:48:26</sys_created_on>
         <sys_id>3b6a6fabeb7b22905c06fcffcad0cd06</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>in_sysprop</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_fb6a2fabeb7b22905c06fcffcad0cdf7_in_sysprop_en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:48:26</sys_updated_on>
         <url/>
@@ -1686,11 +1638,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:48:27</sys_created_on>
         <sys_id>007a6fabeb7b22905c06fcffcad0cd19</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_fb6a2fabeb7b22905c06fcffcad0cdf7___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:48:27</sys_updated_on>
         <url/>
@@ -1709,11 +1661,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:48:27</sys_created_on>
         <sys_id>087a6fabeb7b22905c06fcffcad0cd13</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>out_duration</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_fb6a2fabeb7b22905c06fcffcad0cdf7_out_duration_en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:48:27</sys_updated_on>
         <url/>
@@ -1732,11 +1684,11 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
         <sys_created_on>2025-09-11 20:48:27</sys_created_on>
         <sys_id>487a6fabeb7b22905c06fcffcad0cd15</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="ModTrak" source="x_neyu_modtrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_package>
         <sys_policy/>
         <sys_scope display_value="ModTrak">40834d4f1b1d12108ef92f81b24bcb7f</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_fb6a2fabeb7b22905c06fcffcad0cdf7___action_status___en</sys_update_name>
         <sys_updated_by>mdq204</sys_updated_by>
         <sys_updated_on>2025-09-11 20:48:27</sys_updated_on>
         <url/>
@@ -1746,6 +1698,6 @@ outputs.out_duration = new GlideDuration(waitFor*1000);&#13;
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>16a7eba7eb7b22905c06fcffcad0cd72</sys_id>
         <latest_snapshot>fb6a2fabeb7b22905c06fcffcad0cdf7</latest_snapshot>
-        <compiler_build>glide-yokohama-12-18-2024__patch5-06-11-2025_06-25-2025_1836.zip</compiler_build>
+        <compiler_build>glide-yokohama-12-18-2024__patch7-hotfix2-09-18-2025_09-21-2025_1435.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>
